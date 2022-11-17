@@ -541,8 +541,6 @@ nav{
   .faq-text p{
     display: none;
   }
-  .show .faq-text p{
-  }
   .faq-points img{
     width: 50px;
     margin: 0 20px;
@@ -608,4 +606,14 @@ footer {
 }
 .socmed img{
   width: 40px;
+}
+
+
+.btn-a{
+    background: #FBBD08;
+}
+.btn-b{
+    background: white;
+    color:  #06132D;
+
 }

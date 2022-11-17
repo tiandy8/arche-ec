@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+body{
+  margin: 0;
+  max-width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.container{
+  margin: 0 auto;
+  width: 1100px;
+}
+
+.login{
+  background: url('assets/login-bg.png');
+  background-size: cover;
+}
+  .login-wrapper{
+  width: 35%;
+  padding-top: 40px;
+  align-items: center;
+
+}
+
+.login-wrapper h1{
+  font-size: 42px;
+  text-align: center;
+}
+
+.garis-login{
+  width: 380px;
+  margin-right: 100px;
+  text-align: left;
+  background: #06132D;
+  border: 2px solid #06132D;
+
+}
+.log-content{
+  margin-top: 50px;
+}
+.log-content h3{
+  font-size: 24px;
+}
+.log-content input{
+  width: 90%;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.opt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.forgot-pw{
+  text-align:center;
+  text-decoration: none;
+  margin-bottom: 50px;
+  color: #06132D;
+  font-size: 16px;
+}
+
+.btn-warning{
+  background: #FBD62E;
+  padding: 13px 38px;
+  text-decoration: none;
+  color: #06132D;
+  font-size: 22px;
+  font-weight: bolder;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.signupwg{
+  margin-top: 20px;
+  background:#06132D;
+  padding: 5px 10px 5px 5px;
+  border-radius: 10px;
+
+}
+.signupwg a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.signupwg a img{
+  width: 38px;
+}
+
+.signupwg a span{
+  font-size: 16px;
+  color: white;
+
+}
+
+.no-acc{
+  margin-top: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  padding-bottom: 100px;
+}
+
+
+
+.register{
+  background: url('assets/bg-reg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+  width:100%;
+}
+
+.content{
+  background: white;
+  width: 70%;
+  border-radius: 10px;
+  height: 650px;
+}
+
+.content h1{
+  text-align: center;
+  font-size: 38px;
+  padding-top: 50px;
+  margin-bottom: 10px;
+  margin: 0;
+
+}
+.content hr{
+  width: 90%;
+  border: 2px solid #06132d;
+  background-color: #06132d;
+}
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 50px;
+  margin-bottom: 60px;
+
+}
+.wrap .wrap-1 h3{
+  font-size: 24px;
+}
+.wrap .wrap-2 h3{
+  font-size: 24px;
+}
+
+.input{
+  border: 1px solid #06132d;
+  border-radius: 10px;
+  padding: 15px 30px 15px 5px;
+  width: 300px;
+  margin-right: 10px;
+}
+.btn{
+  margin: 0 300px;
+  text-decoration: none;
+  padding: 10px 40px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  background: #06132d;
+}

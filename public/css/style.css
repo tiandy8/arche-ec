@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+
+}
+*{
+  box-sizing: border-box;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+
+
+
+/* Navbar */
+nav{
+  background: url('../assets/nav.png');
+  background-repeat: no-repeat;
+  height: auto;
+  background-size: cover;
+  
+  justify-content:space-between;
+  align-items: center;
+  display: flex ;
+}
+.logo-y{
+  width: 15%;
+}
+.menu {
+  margin-right: 50px;
+}
+.menu ul{
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.menu ul li a{
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+/* End Of Navbar */
+
+/* Halaman Home */
+
+
+.hero{
+  background: url("../assets/bg/bg.png");
+  background-size: cover;
+  height:800px;
+  color: white;
+}
+
+#logo{
+  width: 20%;
+}
+.btn-yellow{
+  background-color: #F5EB30;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #06132D;
+  font-weight: bold;
+  animation-duration: 1s;
+  border-radius: 10px;
+}
+
+.h-c{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+
+.h-t{
+  font-size: 22px;
+  width: 40%;
+}
+.h-t h1{
+  margin-bottom: 0;
+  margin-top: 80px;
+}
+.h-t p{
+  margin-bottom: 100px;
+}
+.h-t a{
+  margin-left: 50px;
+}
+.h-i{
+  width: 60%;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+  z-index: 0;
+
+}
+.h-i img{
+  position: absolute;
+  max-height: 180%;
+  overflow: hidden;
+  object-fit: cover;
+  width: 1220px;
+  left: 300px;
+  top: -285px;
+
+}
+
+.wave-effect {
+  position: absolute;
+  top: 600px;
+}
+
+
+/* card */
+.kenapa-arche .container h1{
+  text-align: center;
+  margin-bottom: 80px;
+  font-size: 38px;
+  margin-top: 0;
+  font-weight: bold;
+
+}
+.kenapa-arche{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.slider-container{
+  max-width: 1120px;
+  width: 100%;
+  background-color: green;
+  padding: 40px 0px;
+}
+.slide-content{
+  margin: 0 40px;
+}
+.card-wrapper{
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+.card{
+  width: 280px;
+  height: 350px;
+  border-radius: 25px;
+  background-color: #06132D;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 40px;
+}
+.image-content{
+  row-gap: 5px;
+
+}
+.card-image{
+  position: relative;
+  height: 100px;
+  width: 100px;
+
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 4px solid rgba(0, 0, 0, 0.774);
+  border-radius: 50%;
+}
+
+.name{
+  width: 100%;
+  font-weight: bolder;
+  font-size:  22px;
+  font-weight: 500;
+  color: #F5EB30;
+  justify-content: center;
+  text-align: center;
+}
+.description{
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
+#lm-btn{
+  
+  margin: 70px 450px;
+  position: absolute;
+  padding: 10px 45px;
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+.offers-tab{
+  background: url('../assets/bg/bg-w-p.jpg');
+
+  background-size: cover;
+}
+.offer-2{
+  
+  display: flex;
+  gap: 30px;
+  padding-bottom: 200px;
+}
+.offers-wrapper h1{
+  font-size: 52px;  
+  color: white;
+  text-align: center;
+  padding-top: 75px;
+}
+.offers-wrapper h1 span{
+  background-color: #FBBD08;
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
+}
+.offer-1{
+  display: flex;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+.items-sm{
+  width: 30%;
+  height: 300px;
+  border-radius: 20px;
+  background: white;
+}
+.items-big{
+  width: 70%;
+  height: 300px;
+  background: white;
+  border-radius: 20px;
+
+}
+.services{
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+.services-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.rectangle{
+  width: 325px;
+  height: 360px;
+  border-radius: 50px;
+  margin-top: 40px;
+}
+.bg-rectangle{
+  background: #FBBD08;
+  transform:skew(3deg,3deg);
+  width: 325px;
+  height: 400px;
+  border-radius: 50px;
+  margin-top: 40px;
+  position: absolute;
+  z-index: -1;
+  margin-top: 0;
+}
+.rectangle img{
+  width: 20%;
+  margin: 20px 0 0 20px;
+}
+.services-content{
+  margin: 20px;
+}
+.services-content p{
+  margin-bottom: 25px;
+}
+.btn{
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: #06132D;
+}
+#ss-2{
+  background-color:#ebe3cc;
+}
+#s-2 .services-content p{
+  margin-bottom: 45px;
+}
+#s-3 .services-content p{
+  margin-bottom: 95px;
+}
+
+.loc .container h1{
+  text-align: center;
+  font-size: 32px;
+}
+
+.loc{
+  margin-bottom: 75px;
+}
+.loc-wrapper{
+  display: flex;
+  justify-content: space-around;
+}
+.loc-wrapper p{
+  width: 40%;
+  color: white;
+  background:#06132D;
+  padding: 20px;
+  border-radius: 30px;
+}
+.loc-wrapper p span{
+  color: #F5EB30;
+}
+
+
+.loc .container h1 hr{
+  width: 25%;
+  height: 7px;
+  border: none;
+  background:#FBBD08;
+}
+
+/* End Of Halaman Home */
+
+
+
+
+
+/* Location */
+.offline-store-content{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 85%;
+  border-radius: 10px;
+  margin-left: 8%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 20px 2px rgb(0 0 0 / 46%);
+}
+.offline-left{
+  width: 30%;
+}
+.offline-left h1{
+  font-size: 34px;
+  margin-bottom: 0;
+}
+.offline-left h3{
+  font-weight: 300;
+  margin-top: 0;
+}
+.address{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.address img{
+  margin-top: 10px;
+}
+.pos-section{
+  display: flex;
+}
+.pos-section img{
+  width: 2%;
+  align-items: flex-end;
+}
+.pos-section span{
+  font-weight: 200;
+}
+
+/* End Of Location */
+
+
+
+
+/* Contact Us */
+.hubungi-kami-content{
+  margin-left: 8%;
+
+  width: 80%;
+  box-shadow: 0px 0px 7px 1px rgb(0 0 0 / 46%);
+  border-radius: 10px;
+  height: 740px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+.hubungi-kami-content img{
+  width: 15%;
+}
+.hubungi-kami-content h1{
+  font-weight: 600;
+  font-size: 28px;
+  margin: 0;
+}
+.hubungi-kami-content p{
+  margin: 0;
+}
+
+.contact-coloumn{
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+}
+.contact-coloumn textarea{
+  border-radius: 10px;
+  border: 1px solid #000000;
+  resize: none;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+.kontak-atas{
+  display: flex;
+  justify-content: space-between;
+}
+.kontak-atas span h3{
+  font-size: 22px;
+  margin: 10px 0;
+
+}
+.kontak-h3-message {
+  font-size: 22px;
+  margin: 10px 0;
+}
+.input-kontak{
+  padding: 15px 20px;
+  width: 420px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+.kontak-btn{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 10px;
+  background: #06132D;
+}
+
+.lower-contact{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.lower-contact h2{
+  font-size: 22px;
+}
+.lower-contact ul {
+  list-style: none;
+  padding: 0;
+}
+.lower-contact ul li{
+  display: flex;
+  margin-bottom: 10px;
+  gap: 30px;
+
+}
+.lower-contact ul li img{
+  width: 30px;
+}
+/* End Of Contact Us */
+
+
+/* Events */
+
+
+
+.events-section{
+  display: flex;
+  margin: 25px 0;
+  gap: 30px;
+}
+.events-left{
+  width: 45%;
+  height: 300px;
+  background-color: #D9D9D9;
+}
+.events-right{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+.events-right h2{
+  font-size: 20px;
+}
+.events-tombol{
+  padding: 10px 20px;
+  text-decoration: none;
+  color:white;
+  background-color: #06132D;
+  width: fit-content;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+
+
+
+
+/* End Of events */
+
+
+/* FAQ */
+
+  .long-nav{
+    background: url('../assets/bg/faq-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .long-nav h1{
+    color: white;
+    font-size: 64px;
+    padding: 300px 0;
+    margin: 0;
+  }
+
+
+  .faq-wrapper{
+    height: 700px;
+  }
+  .faq-points{
+    display: flex;
+    margin: 20px 0;
+  }
+ 
+  .faq-text{
+    display: block;
+    padding-top: 5px;
+  }
+  .faq-text p{
+    display: none;
+  }
+  .show .faq-text p{
+  }
+  .faq-points img{
+    width: 50px;
+    margin: 0 20px;
+  }
+/* End OF FAQ */
+
+/* About */
+
+
+.about-wrapper{
+  display: flex;
+}
+.about-wrapper img{
+  width: 100%;
+}
+.about-content{
+  width: 50%;
+  margin: 200px 0;
+  text-align: left;
+}
+.about-content p{
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+}
+.about-h1 h1{
+  font-size: 42px;
+}
+.about-h1 hr{
+  border: 3px solid #FBBD08;
+  background-color: #FBBD08;
+}
+/* End About */
+
+/* footer */
+footer {
+  background: url('../assets/footer.jpg');
+  color: white;
+  text-align: left;
+}
+.footer-wrapper{
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-wrapper img{
+  width:  23%;
+}
+.features ul{
+  display: flex;
+  list-style: none;
+  gap: 35px;
+  padding: 0;
+}
+.features ul li a{
+  text-decoration: none;
+  color: white;
+  padding: 0;
+}
+.socmed{
+  display: flex;
+  gap: 30px;
+}
+.socmed img{
+  width: 40px;
+}

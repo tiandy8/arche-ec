@@ -22,6 +22,15 @@ class HomeController extends Controller
     {
         return view('pages.contact');
     }
+    public function events()
+    {
+        return view('pages.events');
+    }
+    public function offlineStore()
+    {
+        return view('pages.offline');
+    }
+
 
 
 }

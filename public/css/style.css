@@ -23,7 +23,7 @@ nav{
   background-repeat: no-repeat;
   height: auto;
   background-size: cover;
-  
+
   justify-content:space-between;
   align-items: center;
   display: flex ;
@@ -191,7 +191,7 @@ nav{
   text-align: center;
 }
 #lm-btn{
-  
+
   margin: 70px 450px;
   position: absolute;
   padding: 10px 45px;
@@ -205,13 +205,13 @@ nav{
   background-size: cover;
 }
 .offer-2{
-  
+
   display: flex;
   gap: 30px;
   padding-bottom: 200px;
 }
 .offers-wrapper h1{
-  font-size: 52px;  
+  font-size: 52px;
   color: white;
   text-align: center;
   padding-top: 75px;
@@ -516,7 +516,7 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
   }
   .long-nav h1{
     color: white;
@@ -533,7 +533,7 @@ nav{
     display: flex;
     margin: 20px 0;
   }
- 
+
   .faq-text{
     display: block;
     padding-top: 5px;

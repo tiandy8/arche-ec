@@ -206,34 +206,7 @@
     </div>
   </section>
 
+  @include('part.footer')
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-wrapper">
-        <img src="assets/logo.svg" alt="" class="logo">
-
-        <div class="footer-content">
-          <div class="features">
-              <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Client</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-              </ul>
-          </div>
-          <div class="socmed">
-              <p>Our Socmed</p>
-              <img src="assets/instagram.svg" alt="">
-              <img src="assets/twitter.svg" alt="">
-              <img src="assets/fb.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 </body>
 </html>

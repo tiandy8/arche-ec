@@ -23,6 +23,15 @@ Route::get('events', [HomeController::class, 'events'])->name('events');
 Route::get('offline', [HomeController::class, 'offlineStore'])->name('offline.store');
 Route::get('store', [HomeController::class, 'store'])->name('store');
 
-Route::get('register', [UserController::class, 'register'])->name('register');
-Route::get('login', [UserController::class, 'login'])->name('login');
 
+Route::middleware('guest')->group(function () {
+
+
+    Route::get('register', [UserController::class, 'register'])->name('register');
+    Route::get('login', [UserController::class, 'login'])->name('login');
+
+    Route::post('login_store', [UserController::class, 'loginStore'])->name('login.store');
+    Route::post('register_store', [UserController::class, 'registerStore'])->name('register.store');
+
+
+});

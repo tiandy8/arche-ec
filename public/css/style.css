@@ -33,6 +33,7 @@ nav{
 }
 .menu {
   margin-right: 50px;
+  display: flex;
 }
 .menu ul{
   display: flex;
@@ -613,10 +614,14 @@ footer {
 
 .btn-a{
     background: #FBBD08;
+    padding: 5px 5px;
+    border-radius: 5px;
 }
 .btn-b{
     background: white;
     color:  #06132D;
+    padding: 10px 5px;
+    border-radius: 5px;
 
 }
 
@@ -662,6 +667,7 @@ footer {
     border: 1px solid rgba(0, 0, 0, 0.117);
     border-radius: 10px;
     box-shadow: 0px 0px 5px 0px;
+    margin-right: 10px;
 
 }
 
@@ -681,22 +687,29 @@ footer {
 .card-p {
     box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
     max-width: 250px;
-    text-align: center;
     font-family: arial;
     border-radius: 15px;
+    padding: 0 13px;
+    position: relative;
+    padding-top: 10px;
   }
 
   .card-p img{
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    height: 150px;
+    height: 200px;
   }
 
+  .card-p h2{
+    margin: 10px 0;
+    font-size: 22px;
+}
   .price {
     color: grey;
-    font-size: 22px;
+    font-size: 18px;
     margin: 0;
+
   }
 
   .card-p button {
@@ -714,9 +727,8 @@ footer {
   .rating{
     display: flex;
     align-items: center;
-    margin-left: 100px ;
     gap: 5px;
-  }
+}
 
   .card-p button:hover {
     opacity: 0.7;

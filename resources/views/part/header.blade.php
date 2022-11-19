@@ -8,8 +8,10 @@
         <li><a href="{{ route('offline.store') }}">OFFLINE STORE</a></li>
         <li><a href="{{ route('events') }}">EVENTS</a></li>
 
-        <a href="/register" class="btn btn-a">Register</a>
-        <a href="/login" class="btn btn-b">Login</a>
+
+
+      <a href="/register" class="btn btn-a">Register</a>
+      <a href="/login" class="btn btn-b">Login</a>
 
       </ul>
     </div>

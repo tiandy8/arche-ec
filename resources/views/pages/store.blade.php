@@ -33,21 +33,182 @@
         </div>
         <div class="store-content">
 
-        <div class="card-sm">
 
-            <div class="card-header">
-                <img src="assets/wskas.jpg" alt="">
+            <div class="p-w">
+                    <div class="card-p">
+                        <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                        <h2>Whiskas</h2>
+
+                        <p class="price">Rp.40,000</p>
+
+                        <div class="rating">
+                            <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                        </div>
+
+                        <p><button>Add to Cart</button></p>
+                    </div>
+
+                    <div class="card-p">
+                        <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                        <h2>Whiskas</h2>
+
+                        <p class="price">Rp.40,000</p>
+
+                        <div class="rating">
+                            <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                        </div>
+
+                        <p><button>Add to Cart</button></p>
+                    </div>
+
+                    <div class="card-p">
+                        <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                        <h2>Whiskas</h2>
+
+                        <p class="price">Rp.40,000</p>
+
+                        <div class="rating">
+                            <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                        </div>
+
+                        <p><button>Add to Cart</button></p>
+                    </div>
+
+                    <div class="card-p">
+                        <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                        <h2>Whiskas</h2>
+
+                        <p class="price">Rp.40,000</p>
+
+                        <div class="rating">
+                            <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                        </div>
+
+                        <p><button>Add to Cart</button></p>
+                    </div>
             </div>
-            <div class="card-body">
-                <h5>Whiskas</h5>
-                <p>Rp. 40.000</p>
-                <div class="rating">
-                    <img src="assets/star.svg" alt="">
-                    <span>4.7</span>
+
+            <div class="p-w">
+                <div class="card-p">
+                    <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                    <h2>Whiskas</h2>
+
+                    <p class="price">Rp.40,000</p>
+
+                    <div class="rating">
+                        <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                    </div>
+
+                    <p><button>Add to Cart</button></p>
                 </div>
 
-            </div>
+                <div class="card-p">
+                    <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                    <h2>Whiskas</h2>
+
+                    <p class="price">Rp.40,000</p>
+
+                    <div class="rating">
+                        <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                    </div>
+
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <div class="card-p">
+                    <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                    <h2>Whiskas</h2>
+
+                    <p class="price">Rp.40,000</p>
+
+                    <div class="rating">
+                        <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                    </div>
+
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <div class="card-p">
+                    <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                    <h2>Whiskas</h2>
+
+                    <p class="price">Rp.40,000</p>
+
+                    <div class="rating">
+                        <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                    </div>
+
+                    <p><button>Add to Cart</button></p>
+                </div>
         </div>
+
+        <div class="p-w">
+            <div class="card-p">
+                <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                <h2>Whiskas</h2>
+
+                <p class="price">Rp.40,000</p>
+
+                <div class="rating">
+                    <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                </div>
+
+                <p><button>Add to Cart</button></p>
+            </div>
+
+            <div class="card-p">
+                <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                <h2>Whiskas</h2>
+
+                <p class="price">Rp.40,000</p>
+
+                <div class="rating">
+                    <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                </div>
+
+                <p><button>Add to Cart</button></p>
+            </div>
+
+            <div class="card-p">
+                <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                <h2>Whiskas</h2>
+
+                <p class="price">Rp.40,000</p>
+
+                <div class="rating">
+                    <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                </div>
+
+                <p><button>Add to Cart</button></p>
+            </div>
+
+            <div class="card-p">
+                <img src="assets/wskas.jpg" alt="Denim Jeans" style="width:100%">
+
+                <h2>Whiskas</h2>
+
+                <p class="price">Rp.40,000</p>
+
+                <div class="rating">
+                    <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                </div>
+
+                <p><button>Product Details</button></p>
+            </div>
+    </div>
+
+
 
         </div>
 

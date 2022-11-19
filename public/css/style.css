@@ -554,7 +554,9 @@ nav{
   display: flex;
 }
 .about-wrapper img{
-  width: 100%;
+    float: right;
+    margin-left: 150px;
+    margin-top: 200px;
 }
 .about-content{
   width: 50%;
@@ -668,34 +670,54 @@ footer {
     margin: 50px 0;
 }
 
-.card-sm{
-    width: 220px;
-    max-height: 280px;
-    border-radius: 25px;
-    background-color: #D9D9D9;
-    display: block;
-    border: 1px solid black;
+
+.p-w{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 48px;
+    margin: 68px auto;
+}
+
+.card-p {
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    text-align: center;
+    font-family: arial;
+    border-radius: 15px;
   }
 
-.card-header img{
+  .card-p img{
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 150px;
+  }
+
+  .price {
+    color: grey;
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .card-p button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background: #FBBD08;
+    text-align: center;
+    cursor: pointer;
     width: 100%;
-    height: 100px;
-}
-.card-body{
-    background: #ffffff;
-    box-shadow: 0px -2px 40px rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    padding: 5px 0;
-    padding-left: 20px;
-
-}
-
-.card-body p{
     font-weight: bold;
-}
-
-.rating{
+    font-size: 18px;
+  }
+  .rating{
     display: flex;
     align-items: center;
+    margin-left: 100px ;
     gap: 5px;
-}
+  }
+
+  .card-p button:hover {
+    opacity: 0.7;
+  }

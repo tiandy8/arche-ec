@@ -26,7 +26,7 @@
          </div>
 
 
-        <img src="assets/logo-2.png" alt="">
+        <img src="assets/logo-2.png" alt="" style="height: 300px; width:300px; ">
       </div>
 
 

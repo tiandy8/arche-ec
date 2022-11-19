@@ -30,6 +30,10 @@ class HomeController extends Controller
     {
         return view('pages.offline');
     }
+    public function store()
+    {
+        return view('pages.store');
+    }
 
 
 

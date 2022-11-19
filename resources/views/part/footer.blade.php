@@ -10,7 +10,7 @@
                 <li><a href="{{ route('about') }}">About</a></li>
                 <li><a href="{{ route('faq') }}">FAQ</a></li>
                 <li><a href="#">Service</a></li>
-                <li><a href="#">Client</a></li>
+                <li><a href="{{ route('store') }}">Store</a></li>
                 <li><a href="#">Team</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="{{ route('contact') }}">Contact</a></li>

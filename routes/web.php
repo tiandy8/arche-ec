@@ -21,6 +21,7 @@ Route::get('faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('events', [HomeController::class, 'events'])->name('events');
 Route::get('offline', [HomeController::class, 'offlineStore'])->name('offline.store');
+Route::get('store', [HomeController::class, 'store'])->name('store');
 
 Route::get('register', [UserController::class, 'register'])->name('register');
 Route::get('login', [UserController::class, 'login'])->name('login');

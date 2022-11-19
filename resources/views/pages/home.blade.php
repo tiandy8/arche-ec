@@ -20,7 +20,7 @@
           <p>"Providing <span class="text-yellow">Needed</span> For <span class="text-yellow">Your Love</span>ly Pets. "</p>
 
 
-          <a href="#" class="btn-yellow">SHOP NOW!</a>
+          <a href="{{ route('store') }}" class="btn-yellow">SHOP NOW!</a>
 
         </div>
 

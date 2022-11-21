@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Auth;
 
 class UserController extends Controller
 {
@@ -15,4 +17,41 @@ class UserController extends Controller
     {
         return view('auth.login');
     }
+
+    public function registerStore(Request $request)
+    {
+        $user = new User();
+        $user->name = $request->name;
+        $user->username = $request->username;
+        $user->phone = $request->phone;
+        $user->email = $request->email;
+        $user->alamat = $request->alamat;
+        $user->password = bcrypt($request->password);
+        $user->role = 'user';
+        $user->save();
+
+        if($user) {return redirect()->route('login')->with('status','Registrasi Berhasil, Silahkan Login!');
+        }
+        return redirect()->back();
+
+    }
+
+    public function loginStore(Request $request)
+    {
+
+        $data = $request->only('email','password');
+
+       if (Auth::attempt($data)) {
+            $request->session()->regenerate();
+            if(Auth::user()->role == 'admin'){
+                return redirect()->route('dashboard');
+            }else{
+                return redirect()->route('store');
+            }
+        }
+        return redirect()->back()->with('error','Email atau Password Salah!');
+
+
+    }
+
 }

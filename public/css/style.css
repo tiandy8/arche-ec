@@ -14,6 +14,13 @@ body {
     margin: 0 auto;
 }
 
+.text-danger{
+    color: red;
+}
+.text-success{
+    color: greenyellow;
+}
+
 
 
 
@@ -658,16 +665,15 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 0px 5px 0px;
 
-
 }
 
 .urutkan select{
     font-weight: 600;
-    padding: 10px 20px;
+    padding: 10px 5px;
     border: 1px solid rgba(0, 0, 0, 0.117);
     border-radius: 10px;
     box-shadow: 0px 0px 5px 0px;
-    margin-right: 10px;
+    margin-left: 10px;
 
 }
 
@@ -733,3 +739,43 @@ footer {
   .card-p button:hover {
     opacity: 0.7;
   }
+
+
+
+/* service */
+
+.service-wrap{
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.services-konten{
+    margin: 50px auto;
+
+}
+
+.service-content{
+    width: 100%;
+    object-position: center;
+    border-radius: 15px;
+
+
+    height: 250px;
+    display: flex;
+    box-shadow: 0px 0px 5px 0px;
+}
+.service-img{
+    width: 35%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.service-desc{
+    padding:10px 30px;
+    border-top-left-radius: 15px;
+
+}
+

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +22,7 @@ Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('events', [HomeController::class, 'events'])->name('events');
 Route::get('offline', [HomeController::class, 'offlineStore'])->name('offline.store');
 Route::get('store', [HomeController::class, 'store'])->name('store');
+Route::get('service', [HomeController::class, 'service'])->name('service');
 
 
 Route::middleware('guest')->group(function () {
@@ -32,6 +33,13 @@ Route::middleware('guest')->group(function () {
 
     Route::post('login_store', [UserController::class, 'loginStore'])->name('login.store');
     Route::post('register_store', [UserController::class, 'registerStore'])->name('register.store');
+
+
+});
+
+Route::middleware('admin')->group(function(){
+
+    Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 
 
 });

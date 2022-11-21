@@ -15,23 +15,32 @@
         <h1>LOGIN</h1>
         <hr class="garis-login">
         <div class="log-content">
-          <h3>Email</h3>
-          <input type="email" class="email" placeholder="Enter Your Email">
+            @if (session('error'))
+                <p class="text-danger" style="color: red;">{{ session('error') }}</p>
+            @elseif (session('status'))
+                <p class="text-success" style="color: green;">{{ session('status') }}</p>
 
-          <h3>Password</h3>
-          <input type="password" class="password" placeholder="Enter Your Password">
+            @endif
+          <form action="{{ route('login.store') }}" method="post">
+             @csrf
+                <h3>Email</h3>
+                <input type="email" class="email" name="email" placeholder="Enter Your Email">
 
-          <div class="opt">
-            <a href="#" class="forgot-pw">Forgot Password ?</a>
+                <h3>Password</h3>
+                <input type="password" class="password" name="password" placeholder="Enter Your Password">
 
-          <a href="#" class="btn-warning">Login</a>
-              Or
-          <div class="signupwg">
-            <a href="#">
-              <img src="assets/google.svg" alt="">
-              <span>Sign Up with Google</span>
-            </a>
-          </div>
+                <div class="opt">
+                    <a href="#" class="forgot-pw">Forgot Password ?</a>
+
+                <button  class="btn-warning">Login</button>
+                    Or
+                <div class="signupwg">
+                    <a href="#">
+                    <img src="assets/google.svg" alt="">
+                    <span>Sign Up with Google</span>
+                    </a>
+                </div>
+            </form>
 
           <a href="#" class="no-acc">Not A Member? Sign Up</a>
           </div>

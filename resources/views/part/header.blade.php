@@ -10,8 +10,10 @@
 
 
 
-      <a href="/register" class="btn btn-a">Register</a>
-      <a href="/login" class="btn btn-b">Login</a>
+        @if (Auth::check() < 1)
+            <a href="/register" class="btn btn-a">Register</a>
+            <a href="/login" class="btn btn-b">Login</a>
+        @endif
 
       </ul>
     </div>

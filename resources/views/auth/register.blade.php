@@ -11,36 +11,39 @@
   <section class="register">
     <div class="container">
       <div class="content">
-        <h1>Register</h1>
-        <hr>
-        <div class="wrap">
-          <div class="wrap-1">
+        <form action="{{ route('register.store') }}" method="POST">
+            @csrf
+                <h1>Register</h1>
+            <hr>
+            <div class="wrap">
+            <div class="wrap-1">
 
-            <h3>Nama</h3>
-            <input type="text" class="input" placeholder="Enter Your Name">
+                <h3>Nama</h3>
+                <input type="text" class="input" name="name" placeholder="Enter Your Name">
 
-            <h3>Email</h3>
-            <input type="email" class="input" placeholder="Enter Your Email">
+                <h3>Email</h3>
+                <input type="email" class="input" name="email" placeholder="Enter Your Email">
 
-            <h3>Password</h3>
-            <input type="password" class="input" placeholder="Enter Your Password">
+                <h3>Password</h3>
+                <input type="password" class="input" name="password" placeholder="Enter Your Password">
 
-          </div>
-          <div class="wrap-2">
+            </div>
+            <div class="wrap-2">
 
 
-            <h3>Username</h3>
-            <input type="text" class="input" placeholder="Enter Username">
+                <h3>Username</h3>
+                <input type="text" class="input" name="username" placeholder="Enter Username">
 
-            <h3>Phone Number</h3>
-            <input type="number" class="input" placeholder="Enter Your Email">
+                <h3>Phone Number</h3>
+                <input type="number" class="input" name="phone" placeholder="Enter Your Email">
 
-            <h3>Confirm Password</h3>
-            <input type="password" class="input" placeholder="Enter Your Password">
+                <h3>Confirm Password</h3>
+                <input type="password" class="input" name="password" placeholder="Enter Your Password">
 
-          </div>
-        </div>
-        <a href="#" class="btn">Register</a>
+            </div>
+            </div>
+            <button  class="btn">Register</button>
+        </form>
       </div>
     </div>
 

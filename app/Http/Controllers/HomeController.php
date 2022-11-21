@@ -34,6 +34,10 @@ class HomeController extends Controller
     {
         return view('pages.store');
     }
+    public function service()
+    {
+        return view('pages.services');
+    }
 
 
 

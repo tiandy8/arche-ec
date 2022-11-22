@@ -1,11 +1,11 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard') }}">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Admin <sup>Arche</sup></div>
     </a>
 
     <!-- Divider -->
@@ -23,7 +23,7 @@
 
     <li class="nav-item active">
         <a class="nav-link" href="{{ route('products') }}">
-            <i class="fas fa-fw fa-car"></i>
+            <i class="fas fa-fw fa-warehouse"></i>
             <span>Produk</span></a>
     </li>
 
@@ -37,7 +37,7 @@
         <a class="nav-link" onclick="document.getElementById('logout-form').submit()" href="#">
             <i class="fas fa-fw fa-leave"></i>
             <span>LogOut</span></a>
-            <form id="logout-form" action="{{ route('logout') }}" method="post">
+            <form id="logout-form" action="{{ route('logout') }}">
                 @csrf
             </form>
     </li>

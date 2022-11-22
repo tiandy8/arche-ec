@@ -19,4 +19,26 @@ class AdminController extends Controller
 
     }
 
+    public function productCreate()
+    {
+        return view('admin.create');
+    }
+
+    public function productStore(Request $request)
+    {
+        if ($request->validated()) {
+
+            $gambar = $request->file('gambar')->store('assets/produk', 'public');
+            Product::create($request->except('gambar') + ['gambar' => $gambar]);
+
+        }
+
+        return redirect()->route('products')->with([
+            'message' => 'Data sukses dibuat',
+            'alert-type' => 'success'
+        ]);
+    }
+
+
+
 }

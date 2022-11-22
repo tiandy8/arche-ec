@@ -17,11 +17,11 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('nama_produk');
-            $table->string('slug');
+            $table->string('slug')->nullable();
             $table->integer('harga');
             $table->text('gambar_produk');
             $table->string('stok');
-            $table->text('deskripsi');
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
     }

@@ -51,7 +51,40 @@ class UserController extends Controller
         }
         return redirect()->back()->with('error','Email atau Password Salah!');
 
+    }
 
+    public function userDetail($id)
+    {
+        $user = User::find($id);
+        return view('pages.user', compact('user'));
+    }
+
+    public function userEdit($id)
+    {
+
+        $user = User::where('id', $id)->first();
+        return view('pages.edit-user', compact('user'));
+
+    }
+
+    public function updateUser(Request $request, $id)
+    {
+        $user = User::where('id',$id)->first();
+        $user->name = $request->name;
+        $user->phone = $request->phone;
+        $user->email = $request->email;
+        $user->alamat = $request->alamat;
+        $user->update();
+
+        return redirect()->route('store');
+
+    }
+
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('store');
     }
 
 }

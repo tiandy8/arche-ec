@@ -42,7 +42,7 @@
                 </div>
             </form>
 
-          <a href="#" class="no-acc">Not A Member? Sign Up</a>
+          <a href="{{ route('register') }}" class="no-acc">Not A Member? Sign Up</a>
           </div>
 
         </div>

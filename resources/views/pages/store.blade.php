@@ -4,10 +4,13 @@
 
 <section class="store-content">
 
-    <div class="sm-menu">
-        <a href="#"><img src="assets/user.svg" alt=""></a>
-        <a href="#"><img src="assets/shopping-cart.svg" alt=""></a>
-    </div>
+
+
+    @if (Auth::check() >= 1)
+        @include('part.sm-menu')
+
+    @endif
+
 
     <div class="container">
 

@@ -2,7 +2,7 @@
  <footer>
     <div class="container">
       <div class="footer-wrapper">
-        <img src="assets/logo.svg" alt="" class="logo">
+        <img src="{{ url('assets/logo.svg') }}" alt="" class="logo">
 
         <div class="footer-content">
           <div class="features">
@@ -18,9 +18,9 @@
           </div>
           <div class="socmed">
               <p>Our Socmed</p>
-              <img src="assets/instagram.svg" alt="">
-              <img src="assets/twitter.svg" alt="">
-              <img src="assets/fb.svg" alt="">
+              <img src="{{ url('assets/instagram.svg') }}" alt="">
+              <img src="{{ url('assets/twitter.svg') }}" alt="">
+              <img src="{{ url('assets/fb.svg') }}" alt="">
           </div>
         </div>
       </div>

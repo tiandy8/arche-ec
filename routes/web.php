@@ -37,9 +37,24 @@ Route::middleware('guest')->group(function () {
 
 });
 
+Route::middleware('auth')->group(function() {
+
+    Route::get('user/{id}', [UserController::class, 'userDetail'])->name('user.detail');
+    Route::get('user/edit/{id}', [UserController::class, 'userEdit'])->name('user.edit');
+    Route::post('user/update/{id}', [UserController::class, 'updateUser'])->name('user.update');
+
+
+
+
+    Route::get('logout', [UserController::class, 'logout'])->name('logout');
+
+});
+
 Route::middleware('admin')->group(function(){
 
     Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+
+    Route::get('products', [AdminController::class, 'products'])->name('products');
 
 
 });

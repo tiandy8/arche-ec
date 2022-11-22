@@ -1,6 +1,6 @@
  <!-- Navbar -->
  <nav>
-    <img src="assets/logo-yellow.png" alt="Arche" class="logo-y">
+    <img src="{{ url('assets/logo-yellow.png') }}" alt="Arche" class="logo-y">
     <div class="menu">
       <ul>
         <li><a href="{{ route('index') }}">HOME</a></li>

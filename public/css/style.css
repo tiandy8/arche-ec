@@ -637,7 +637,8 @@ footer {
     display: flex;
     flex-direction: column;
     float: right;
-    padding: 10px 15px;
+    padding: 10px 5px;
+    margin-left:30px;
     gap: 5px;
     border-radius: 10px;
     box-shadow: 0px 1px 14px 0px;
@@ -779,3 +780,96 @@ footer {
 
 }
 
+
+/* User */
+
+.pengguna{
+    text-align: center;
+}
+
+.pengguna h1{
+    margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: bold;
+
+}
+
+.pengguna img{
+    width: 180px;
+    height: 180px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+}
+
+.user-cred{
+    padding: 20px;
+    border-radius: 20px;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 5px 0px;
+    text-align: left;
+}
+.user-cred span{
+    font-weight: 600;
+}
+.user-cred p{
+    font-weight: 500;
+}
+
+
+.aksi{
+    display: flex;
+    flex-direction: column;
+}
+.btn-lg{
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    background: #FBBD08;
+
+}
+
+.btn-lg-red{
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    background: red;
+
+}
+.btn-lg-green{
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    background: green;
+}
+
+
+/* user edit */
+
+.fc{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px 0;
+}
+.fc input{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+.fc textarea{
+    border-radius: 5px;
+    resize: none;
+}

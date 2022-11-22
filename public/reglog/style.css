@@ -140,7 +140,7 @@ body{
   display: flex;
   justify-content: space-between;
   margin: 30px 50px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 
 }
 .wrap .wrap-1 h3{
@@ -149,7 +149,10 @@ body{
 .wrap .wrap-2 h3{
   font-size: 24px;
 }
-
+#message{
+    margin: 0 50px 20px 50px;
+    display: inline-block;
+}
 .input{
   border: 1px solid #06132d;
   border-radius: 10px;
@@ -166,4 +169,9 @@ body{
   font-weight: bold;
   color: white;
   background: #06132d;
+}
+
+button:disabled,
+button[disabled]{
+    opacity: 0.3;
 }

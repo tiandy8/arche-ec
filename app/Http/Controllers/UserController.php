@@ -20,6 +20,12 @@ class UserController extends Controller
 
     public function registerStore(Request $request)
     {
+
+        if($request->password != $request->repassword){
+
+            return redirect()->back()->with('error','Password dan konfirmasi tidak sesuai!');
+        }
+
         $user = new User();
         $user->name = $request->name;
         $user->username = $request->username;

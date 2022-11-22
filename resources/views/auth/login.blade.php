@@ -19,7 +19,6 @@
                 <p class="text-danger" style="color: red;">{{ session('error') }}</p>
             @elseif (session('status'))
                 <p class="text-success" style="color: green;">{{ session('status') }}</p>
-
             @endif
           <form action="{{ route('login.store') }}" method="post">
              @csrf

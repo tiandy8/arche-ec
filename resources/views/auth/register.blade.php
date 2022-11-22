@@ -25,7 +25,7 @@
                 <input type="email" class="input" name="email" placeholder="Enter Your Email">
 
                 <h3>Password</h3>
-                <input type="password" class="input" name="password" placeholder="Enter Your Password">
+                <input type="password" id="password" onkeyup="checkpassword(this)" class="input" name="password" placeholder="Enter Your Password">
 
             </div>
             <div class="wrap-2">
@@ -38,15 +38,39 @@
                 <input type="number" class="input" name="phone" placeholder="Enter Your Email">
 
                 <h3>Confirm Password</h3>
-                <input type="password" class="input" name="password" placeholder="Enter Your Password">
+                <input type="password" id="confirm" onkeyup="checkpassword(this)" class="input" name="repassword" placeholder="Enter Your Password">
+            </div>
 
             </div>
-            </div>
-            <button  class="btn">Register</button>
+            <h4>Kode Pemulihan</h4>
+            <input type="number" placeholder="Buat Kode Pemulihan">
+
+            @if (session('error'))
+                <p style="color : red;" id="message">{{ session('error') }}</p>
+            @endif
+            <i style="color : red;" id="message"></i>
+
+            <button  class="btn" id="register">Register</button>
         </form>
       </div>
     </div>
 
   </section>
+
+  <script type="text/javascript">
+
+        function checkpassword(el) {
+            // var password = document.getElementById('password'),
+            //     repassword = document.getElementById('confirm'),
+            //     message  = document.getElementById('message'),
+            //     regis    = document.getElementById('register');
+            // if(password.value != repassword.value){
+            //     message.innerHTML = "Password & Konfirmasi password tidak sesuai.";
+            // }else{
+            //     message.innerHTML = "";
+            //     regis.removeAttribute('disabled');
+            // }
+        }
+    </script>
 </body>
 </html>

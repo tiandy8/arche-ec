@@ -696,6 +696,7 @@ footer {
     max-width: 250px;
     font-family: arial;
     border-radius: 15px;
+    margin-bottom: 20px;
     padding: 0 13px;
     position: relative;
     padding-top: 10px;
@@ -816,7 +817,6 @@ footer {
 .user-cred p{
     font-weight: 500;
 }
-
 
 .aksi{
     display: flex;

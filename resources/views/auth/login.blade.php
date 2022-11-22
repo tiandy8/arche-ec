@@ -7,7 +7,7 @@
   <title>Masuk  / Login | Arche Pet</title>
   <link rel="stylesheet" href="{{ asset('reglog/style.css') }}">
 </head>
-<body>
+<body class="body-login">
 
   <section class="login">
     <div class="container">
@@ -29,7 +29,7 @@
                 <input type="password" class="password" name="password" placeholder="Enter Your Password">
 
                 <div class="opt">
-                    <a href="#" class="forgot-pw">Forgot Password ?</a>
+                    <a href="{{ route('forgot.password') }}" class="forgot-pw">Forgot Password ?</a>
 
                 <button  class="btn-warning">Login</button>
                     Or

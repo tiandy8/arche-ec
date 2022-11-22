@@ -18,6 +18,31 @@ class UserController extends Controller
         return view('auth.login');
     }
 
+    public function forgotPassword()
+    {
+
+
+        return view('auth.forgot');
+    }
+
+    public function forgotSend(Request $request)
+    {
+
+        $credentials = $request->validate([
+            'username' => ['required'],
+            'pemulihan' => ['required'],
+
+        ]);
+
+        if (Auth::once($credentials)) {
+            $request->session->regenerate();
+            return view('auth.reset');
+        }
+
+        return redirect()->back()->with('error', 'Username dan Kode Pemulihan tidak sesuai');
+
+    }
+
     public function registerStore(Request $request)
     {
 
@@ -32,6 +57,7 @@ class UserController extends Controller
         $user->phone = $request->phone;
         $user->email = $request->email;
         $user->alamat = $request->alamat;
+        $user->pemulihan = $request->pemulihan;
         $user->password = bcrypt($request->password);
         $user->role = 'user';
         $user->save();

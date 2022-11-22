@@ -34,6 +34,10 @@ Route::middleware('guest')->group(function () {
     Route::post('login_store', [UserController::class, 'loginStore'])->name('login.store');
     Route::post('register_store', [UserController::class, 'registerStore'])->name('register.store');
 
+    Route::get('forgot_password', [UserController::class, 'forgotPassword'])->name('forgot.password');
+    Route::post('forgot_send', [UserController::class, 'forgotSend'])->name('forgot.send');
+
+
 
 });
 

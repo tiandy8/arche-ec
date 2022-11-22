@@ -7,7 +7,7 @@
   <title>Register | Arche</title>
   <link rel="stylesheet" href="{{ asset('reglog/style.css') }}">
 </head>
-<body>
+<body id="body-reg">
   <section class="register">
     <div class="container">
       <div class="content">
@@ -41,9 +41,13 @@
                 <input type="password" id="confirm" onkeyup="checkpassword(this)" class="input" name="repassword" placeholder="Enter Your Password">
             </div>
 
+
+
             </div>
-            <h4>Kode Pemulihan</h4>
-            <input type="number" placeholder="Buat Kode Pemulihan">
+
+            <h3 class="ml-5">Kode Pemulihan</h3>
+            <input type="number" name="pemulihan" class="input-lg" placeholder="Buat Kode Pemulihan">
+
 
             @if (session('error'))
                 <p style="color : red;" id="message">{{ session('error') }}</p>
@@ -51,6 +55,7 @@
             <i style="color : red;" id="message"></i>
 
             <button  class="btn" id="register">Register</button>
+            {{-- disabled --}}
         </form>
       </div>
     </div>

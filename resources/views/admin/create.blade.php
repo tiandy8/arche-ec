@@ -22,8 +22,8 @@
                 <input type="number" name="harga" class="form-control" value="{{ old('harga') }}">
             </div>
             <div class="form-group">
-                <label for="jumlah_kursi">Stok</label>
-                <input type="number" name="jumlah_kursi" class="form-control" value="{{ old('jumlah_kursi') }}">
+                <label for="stok">Stok</label>
+                <input type="number" name="stok" class="form-control" value="{{ old('stok') }}">
             </div>
             <div class="form-group">
                 <label for="gambar_produk">Gambar</label>

@@ -5,7 +5,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h3>Daftar Produk</h3>
-            <a href="" class="btn btn-primary">Tambah Data</a>
+            <a href="{{ route('product.create') }}" class="btn btn-primary">Tambah Data</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -16,27 +16,27 @@
                             <th>Nama Produk</th>
                             <th>Gambar Produk</th>
                             <th>Harga Produk</th>
-                            <th>Stok Produk</th>
+                            <th>Stok</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($cars as $car)
+
+                        @forelse ($products as  $product)
 
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $car->nama_mobil }}</td>
+                                <td>{{ $product->nama_produk }}</td>
                                 <td>
-                                    <img src="{{ Storage::url($car->gambar) }}" width="200"  alt="">
+                                    <img src="{{ asset('photos/'.$product->gambar_produk) }}" width="200"  alt="">
                                 </td>
-                                <td>{{ $car->harga_sewa }}</td>
-                                <td>{{ $car->status }}</td>
+                                <td>Rp.{{ number_format( $product->harga) }}</td>
+                                <td>{{ $product->stok }}</td>
                                 <td>
-                                    <a href="{{ route('admin.cars.edit', $car->id ) }}" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="/product/edit/{{ $product->id }}" class="btn btn-sm btn-warning">Edit</a>
 
-                                    <form onclick="return confirm('anda yakin data di hapus?')" class="d-inline" action="{{ route('admin.cars.destroy',  $car->id) }}" method="post">
+                                    <form onclick="return confirm('anda yakin data di hapus?')" class="d-inline" action="{{ route('product.destroy',  $product->id) }}" >
                                         @csrf
-                                        @method('delete')
                                         <button class="btn btn-danger btn-sm">Delete</button>
                                     </form>
                                 </td>

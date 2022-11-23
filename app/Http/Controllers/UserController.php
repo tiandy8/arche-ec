@@ -106,9 +106,21 @@ class UserController extends Controller
         $user->phone = $request->phone;
         $user->email = $request->email;
         $user->alamat = $request->alamat;
+
+       if ($request->foto_profil) {
+
+            $foto_profil = $request->foto_profil;
+
+            $photoName = $foto_profil->getClientOriginalName();
+            $destination = 'profil';
+            $foto_profil->move($destination, $photoName);
+            $user->foto_profil = $photoName;
+
+       }
+
         $user->update();
 
-        return redirect()->route('store');
+        return redirect('user/' . Auth::user()->id);
 
     }
 

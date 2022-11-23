@@ -802,6 +802,11 @@ footer {
     border-radius: 50%;
 }
 
+#pp-card{
+    margin-top: 280px;
+
+}
+
 .user-cred{
     padding: 20px;
     border-radius: 20px;
@@ -862,7 +867,7 @@ footer {
 .fc{
     display: flex;
     flex-direction: column;
-    margin: 0 0 10px 0;
+    margin:  0 10px 20px 0;
 }
 .fc input{
     border: 1px solid black;
@@ -872,4 +877,49 @@ footer {
 .fc textarea{
     border-radius: 5px;
     resize: none;
+}
+
+
+.profile-pic-div{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid grey;
+}
+
+#photo{
+    height: 100%;
+    width: 100%;
+
+}
+
+#file{
+    display: none;
+}
+
+#uploadBtn{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: wheat;
+    line-height: 30px;
+    font-family: sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.foto-profil-{
+    box-shadow: 0px 0px 5px 0px;
+    object-fit: cover;
 }

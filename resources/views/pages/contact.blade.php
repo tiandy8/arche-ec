@@ -13,23 +13,34 @@
                 <img src="assets/logo-2.png" alt="">
                 <h1>Question Or Comments</h1>
                 <p>Please fill out the form below and someone from the Arche team will respond within 24 hours!</p>
-
+                <form action="{{ route('contact') }}" method="POST">
+                    @csrf
                 <div class="contact-coloumn">
-                    <div class="kontak-atas">
-                        <span>
-                            <h3>Name</h3>
-                        <input type="text" class="input-kontak" placeholder="Enter Your Name">
-                        </span>
-                        <span>
-                            <h3>Email</h3>
-                        <input type="email" class="input-kontak" placeholder="Enter Your Email">
-                        </span>
-                    </div>
-                    <h3 class="kontak-h3-message">Message</h3>
-                    <textarea name="pesan" class="kontak-pesan" cols="50" rows="15" placeholder="Enter Your Message"></textarea>
+                    @if(session()->has('message'))
+                        <div style="color:green;" >
+                            {{ session()->get('message') }}
+                        </div>
+                    @endif
 
-                    <a href="#" class="kontak-btn">Send</a>
+
+                        <div class="kontak-atas">
+                            <span>
+                                <h3>Name</h3>
+                            <input type="text" name="nama" class="input-kontak" placeholder="Enter Your Name" required>
+                            </span>
+                            <span>
+                                <h3>Email</h3>
+                            <input type="email" class="input-kontak" name="email" placeholder="Enter Your Email" required>
+                            </span>
+                        </div>
+                        <h3 class="kontak-h3-message"  >Message</h3>
+
+                        <textarea name="pesan" class="kontak-pesan" cols="50" rows="15" placeholder="Enter Your Message" required></textarea>
+
+                        <button class="kontak-btn">Send</button>
+
                 </div>
+            </form>
     </div>
     <div class="lower-contact">
         <h2>Anda Juga Dapat Menghubungi Kami melalui :</h2>

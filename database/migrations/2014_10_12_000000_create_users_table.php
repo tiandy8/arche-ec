@@ -20,6 +20,7 @@ return new class extends Migration
             $table->enum('role', ['admin','user']);
             $table->string('phone')->unique();
             $table->string('email')->unique();
+            $table->text('foto_profil')->nullable();
             $table->string('pemulihan');
             $table->timestamp('email_verified_at')->nullable();
             $table->text('alamat')->nullable();

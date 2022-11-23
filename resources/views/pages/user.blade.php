@@ -8,7 +8,7 @@
             <div class="pengguna">
                 <h1>Profil Pengguna</h1>
 
-                <img src="{{ url('assets/catnip.jpg') }}" alt="">
+                <img src="{{ url('profil/'. $user->foto_profil) }}" class="foto-profil-" alt="">
 
                 <div class="user-cred">
 

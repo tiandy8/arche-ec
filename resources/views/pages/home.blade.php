@@ -95,7 +95,7 @@
         </div>
       </div>
 
-      <a href="#" class="btn-yellow" id="lm-btn">Learn More</a>
+      <a href="{{ route('faq') }}" class="btn-yellow" id="lm-btn">Learn More</a>
     </div>
   </section>
 

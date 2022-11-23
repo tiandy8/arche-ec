@@ -20,6 +20,7 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('about', [HomeController::class, 'about'])->name('about');
 Route::get('faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('contact', [HomeController::class, 'contactStore'])->name('contact.store');
 Route::get('events', [HomeController::class, 'events'])->name('events');
 Route::get('offline', [HomeController::class, 'offlineStore'])->name('offline.store');
 Route::get('store', [HomeController::class, 'store'])->name('store');
@@ -48,6 +49,8 @@ Route::middleware('auth')->group(function() {
     Route::get('user/{id}', [UserController::class, 'userDetail'])->name('user.detail');
     Route::get('user/edit/{id}', [UserController::class, 'userEdit'])->name('user.edit');
     Route::post('user/update/{id}', [UserController::class, 'updateUser'])->name('user.update');
+
+    Route::post('product/update-pp/{id}', [UserController::class, 'updatePp'])->name('update.pp');
 
     Route::get('logout', [UserController::class, 'logout'])->name('logout');
 

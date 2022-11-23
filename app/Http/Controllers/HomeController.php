@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Message;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,24 @@ class HomeController extends Controller
     {
         return view('pages.contact');
     }
+
+    public function contactStore(Request $request)
+    {
+        $data = $request->validate([
+            'nama' => 'required',
+            'email' => 'required',
+            'pesan' => 'required'
+        ]);
+
+        Message::create($data);
+
+        return redirect()->back()->with([
+            'message' => 'pesan anda berhasil dikirim',
+            'alert-type' => 'success'
+        ]);
+
+    }
+
     public function events()
     {
         return view('pages.events');

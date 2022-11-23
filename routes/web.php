@@ -68,5 +68,8 @@ Route::middleware('admin')->group(function(){
     Route::get('product/destroy/{id}', [AdminController::class, 'productDestroy'])->name('product.destroy');
     Route::post('product/update-img/{id}', [AdminController::class, 'updateImage'])->name('update.image');
 
+    Route::get('pesan', [AdminController::class, 'pesan'])->name('pesan');
+    Route::post('pesan/delete/{id}', [AdminController::class, 'messagesDestroy'])->name('messages.destroy');
+
 
 });

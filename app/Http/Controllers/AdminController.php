@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Message;
 
 class AdminController extends Controller
 {
@@ -121,6 +122,24 @@ class AdminController extends Controller
 
     }
 
+    public function pesan()
+    {
 
+        $messages = Message::latest()->get();
+        return view('admin.pesan', compact('messages'));
+    }
+
+
+    public function messagesDestroy($id)
+    {
+        $data = Message::find($id);
+        $data->delete();
+
+        return redirect()->back();
+
+
+
+
+    }
 
 }

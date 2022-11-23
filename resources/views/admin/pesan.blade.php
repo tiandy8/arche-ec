@@ -1,0 +1,49 @@
+@extends('part.admin')
+
+@section('content')
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h3>Daftar Pesan</h3>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama </th>
+                        <th>Email</th>
+                        <th>Pesan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse ($messages as $message)
+
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $message->nama }}</td>
+                            <td>{{ $message->email }}</td>
+                            <td>{{ $message->pesan }}</td>
+                            <td>
+                                <form onclick="return confirm('anda yakin data di hapus?')" class="d-inline" action="{{ route('messages.destroy',  $message->id) }}" method="post">
+                                    @csrf
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        @empty
+                            <tr>
+                                <td class="text-center" colspan="6">Data Kosong</td>
+                            </tr>
+                        @endforelse
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+@endsection

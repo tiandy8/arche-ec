@@ -28,7 +28,7 @@
     </li>
 
     <li class="nav-item active">
-        <a class="nav-link" href="#}">
+        <a class="nav-link" href="{{ route('pesan') }}">
             <i class="fas fa-fw fa-envelope"></i>
             <span>Daftar Pesan</span></a>
     </li>

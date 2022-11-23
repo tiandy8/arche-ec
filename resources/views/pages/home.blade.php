@@ -120,7 +120,9 @@
                             <p>
                                 {{ $data->nama_produk }}
                             </p>
-                            <span>{{ $data->harga }}</span>
+                            <span>Rp.{{ number_format($data->harga) }}</span>
+
+                            <a href="/store" class="btn-sm">Go to Shop</a>
 
                         </div>
 

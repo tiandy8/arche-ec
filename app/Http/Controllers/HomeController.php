@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $datas = Product::latest()->get();
+        $datas = Product::take(2)->get();
 
         return view('pages.home', compact('datas'));
     }

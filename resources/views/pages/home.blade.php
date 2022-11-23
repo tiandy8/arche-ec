@@ -104,25 +104,60 @@
   <div class="container">
     <div class="offers-wrapper">
       <h1>Hot <span>Offers</span></h1>
-      <div class="offer-1">
 
-        <div class="items-big">
 
-        </div>
+      @forelse ($datas as $data)
 
-        <div class="items-sm">
+            <div class="offer-1">
 
-        </div>
 
-      </div>
-      <div class="offer-2">
-        <div class="items-sm">
 
-        </div>
-        <div class="items-big">
+                    <div class="items-big">
+                        <img class="produk-besar" src="{{ url('photos/'. $data->gambar_produk) }}" alt="">
 
-        </div>
-      </div>
+                        <div class="tawaran-desc">
+
+                            <p>
+                                {{ $data->nama_produk }}
+                            </p>
+                            <span>Rp.{{ number_format($data->harga) }}</span>
+
+                            <a href="/store" class="btn-sm">Go to Shop</a>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="items-sm">
+                        <img class="produk-kecil" src="{{ url('photos/'. $data->gambar_produk) }}" alt="">
+                    </div>
+
+
+            </div>
+
+            @empty
+
+            <p>There's no Hot Offer's now :D</p>
+
+            @endforelse
+
+
+            {{-- <div class="offer-2">
+                <div class="items-sm">
+                    <img class="produk-kecil" src="{{ url('photos/'. $data->gambar_produk) }}" alt="">
+                </div>
+                <div class="items-big">
+
+                </div>
+            </div> --}}
+
+
+
+
+
     </div>
   </div>
 

@@ -31,9 +31,27 @@ class HomeController extends Controller
     {
         return view('pages.offline');
     }
-    public function store()
+    public function store(Request $request)
     {
-        $datas = Product::latest()->get();
+
+        $order = $request->order;
+        if($order == null){
+            $datas = Product::latest()->get();
+        } elseif($order == 'latest'){
+            $datas = Product::latest()->get();
+        } elseif($order == 'oldest'){
+            $datas = Product::orderBy('created_at', 'ASC')->get();
+        } elseif($order == 'title_asc'){
+            $datas = Product::orderBy('nama_produk', 'ASC')->get();
+        } elseif($order == 'title_desc'){
+            $datas = Product::orderBy('nama_produk', 'DESC')->get();
+        }
+
+        if ($request->has('search')) {
+
+            $datas = Product::where('nama_produk', 'LIKE' , '%' .$request->search . '%')->get();
+
+        }
 
         return view('pages.store', compact('datas'));
     }

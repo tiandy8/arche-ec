@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +24,7 @@ Route::get('events', [HomeController::class, 'events'])->name('events');
 Route::get('offline', [HomeController::class, 'offlineStore'])->name('offline.store');
 Route::get('store', [HomeController::class, 'store'])->name('store');
 Route::get('service', [HomeController::class, 'service'])->name('service');
+
 
 
 Route::middleware('guest')->group(function () {

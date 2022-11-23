@@ -691,6 +691,17 @@ footer {
 }
 
 /* store */
+#product-cage{
+    text-decoration: none;
+    color: black;
+}
+
+#product-cage :hover{
+    background-color: black;
+    opacity: 0.6;
+
+    color: white;
+}
 
 .sm-navbar{
     display: flex;
@@ -967,4 +978,107 @@ footer {
 .foto-profil-{
     box-shadow: 0px 0px 5px 0px;
     object-fit: cover;
+}
+
+/* detail produk */
+
+.detail-produk{
+    box-shadow: 0px 0px 7px;
+    width: 100%;
+    margin: 30px 0;
+    margin-bottom: 80px;
+    border-radius: 15px;
+}
+
+.top-detail{
+    display: flex;
+
+}
+
+.info-produk{
+    padding: 5px 15px 5px 15px;
+    display: flex;
+    flex-direction: column;
+}
+.info-produk h2{
+    font-weight: 500;
+}
+.info-produk h3{
+    font-size: 20px;
+}
+
+.gambar-detail-produk{
+    height: 400px;
+    width: 550px;
+    object-fit: cover;
+    border-radius: 15px 0px 0px 0px;
+}
+
+.garis-produk{
+    border: 1px solid black;
+    background: black;
+    width: 100%;
+}
+
+.stok-total{
+    font-size: 15px;
+}
+.stok-total span{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#subtotal{
+    font-size: 18px;
+}
+#subtotal span{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 370px;
+}
+
+#tombolan{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.btn-beli{
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 30px;
+    width: 150px;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+}
+
+
+.btn-keranjang{
+    text-decoration: none;
+    border:none;
+    background-color: #06132D;
+    border-radius: 10px;
+
+    padding: 10px 30px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.bot-detail{
+    padding: 30px 30px 50px 30px;
+}
+
+.deskprod{
+    border: 1px solid black;
+    padding: 25px;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 15px;
+    font-size: 20px;
 }

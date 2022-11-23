@@ -23,7 +23,11 @@ Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('contact', [HomeController::class, 'contactStore'])->name('contact.store');
 Route::get('events', [HomeController::class, 'events'])->name('events');
 Route::get('offline', [HomeController::class, 'offlineStore'])->name('offline.store');
+
 Route::get('store', [HomeController::class, 'store'])->name('store');
+Route::get('detail-produk/{id}', [ProductController::class, 'detailProduk'])->name('detail.produk');
+
+
 Route::get('service', [HomeController::class, 'service'])->name('service');
 
 

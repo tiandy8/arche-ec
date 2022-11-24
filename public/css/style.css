@@ -1011,6 +1011,8 @@ footer {
     height: 400px;
     width: 550px;
     object-fit: cover;
+    box-sizing: border-box;
+    box-shadow: inset -350px 0 100px 0 #FFF;
     border-radius: 15px 0px 0px 0px;
 }
 
@@ -1082,3 +1084,4 @@ footer {
     border-radius: 15px;
     font-size: 20px;
 }
+

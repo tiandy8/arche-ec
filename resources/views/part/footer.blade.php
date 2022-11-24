@@ -18,9 +18,9 @@
           </div>
           <div class="socmed">
               <p>Our Socmed</p>
-              <img src="{{ url('assets/instagram.svg') }}" alt="">
-              <img src="{{ url('assets/twitter.svg') }}" alt="">
-              <img src="{{ url('assets/fb.svg') }}" alt="">
+              <a href="https://www.instagram.com/bbezoar"><img src="{{ url('assets/instagram.svg') }}" alt=""></a>
+              <a href="https://www.twitter.com/urbiggestfault"><img src="{{ url('assets/twitter.svg') }}" alt=""></a>
+              <a href="https://www.facebook.com/meminion.meminion/"> <img src="{{ url('assets/fb.svg') }}" alt=""></a>
           </div>
         </div>
       </div>

@@ -11,18 +11,40 @@
 
             <div class="top-detail">
 
-                <img class="gambar-detail-produk" src="{{ url('photos/catnip.jpg')}}" alt="">
+                <img class="gambar-detail-produk" src="{{ url('photos/' . $data->gambar_produk)}}" alt="">
 
                 <div class="info-produk">
-                    <h2>Whiskas Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, odit!</h2>
+                    <h2>{{ $data->nama_produk }}</h2>
                     <div class="rating">
                         <img src="{{ url('assets/star.svg') }}" alt="" style="height:20px;"><p>4.7</p>
                     </div>
-                    <h3>Rp. 40,000</h3>
+                    <h3>Rp.{{ number_format($data->harga)}}</h3>
                     <hr class="garis-produk">
-                    <p class="stok-total">Stock: <span>99999</span></p>
 
-                    <p id="subtotal">Subtotal:  <span> Rp 80,0000</span></p>
+
+
+                    <div class="input-group inline-group">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary btn-minus">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+
+                        {{request()->input('quantity')}}
+
+                            <input class="form-control quantity" min="0" name="quantity" value="" type="number">
+
+
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary btn-plus">
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </div>
+                    </div>
+
+                    <p class="stok-total">Stock: <span>{{ $data->stok }}</span></p>
+
+                    <p id="subtotal">Subtotal:  <span>{{ $data->harga * $nameValue }}</span></p>
 
                     <div id="tombolan">
                         <a href="#" class="btn-beli">Beli</a>
@@ -37,7 +59,7 @@
                 <p class="deskprod">Deskripsi Produk</p>
 
 
-                  <p style="font-size: 18px; line-height: 33px; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ea enim architecto, quidem ipsum cupiditate modi consequuntur cum? Soluta iure deserunt suscipit recusandae dolore tenetur deleniti. Assumenda eius molestias quas ratione, impedit aspernatur quod, rerum ipsa nihil dolore adipisci odio sunt quisquam magni. Hic iusto, incidunt neque voluptas minima eveniet molestiae aliquam id obcaecati reprehenderit aliquid nemo eligendi aut, nihil est ducimus laudantium laboriosam nostrum deserunt. Rem fugit unde at! Voluptas recusandae culpa aut, eius tempora commodi minima omnis natus beatae magnam, veritatis sed corporis eligendi itaque saepe officia blanditiis aliquam sequi eveniet, ipsam eos laboriosam consectetur soluta. Officiis mollitia nihil non libero eveniet harum facilis obcaecati ad autem, totam porro. Totam at veritatis laudantium rem placeat. Veniam, soluta nulla.</p>
+                  <p style="font-size: 18px; line-height: 33px; ">{{ $data->deskripsi }}</p>
 
             </div>
 

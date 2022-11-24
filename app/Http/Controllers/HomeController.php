@@ -12,19 +12,19 @@ class HomeController extends Controller
     {
         $datas = Product::take(2)->get();
 
-        return view('pages.home', compact('datas'));
+        return view('pages.home' , compact('datas'));
     }
     public function about()
     {
-        return view('pages.about');
+        return view('pages.about' , (['judul' => 'About']));
     }
     public function faq()
     {
-        return view('pages.faq');
+        return view('pages.faq' , (['judul' => 'FAQ']));
     }
     public function contact()
     {
-        return view('pages.contact');
+        return view('pages.contact' , (['judul' => 'Contact']));
     }
 
     public function contactStore(Request $request)
@@ -46,11 +46,11 @@ class HomeController extends Controller
 
     public function events()
     {
-        return view('pages.events');
+        return view('pages.events' , (['judul' => 'Events']));
     }
     public function offlineStore()
     {
-        return view('pages.offline');
+        return view('pages.offline' , (['judul' => 'Offline Store']));
     }
     public function store(Request $request)
     {
@@ -74,11 +74,11 @@ class HomeController extends Controller
 
         }
 
-        return view('pages.store', compact('datas'));
+        return view('pages.store', compact('datas') , (['judul' => 'Store']));
     }
     public function service()
     {
-        return view('pages.services');
+        return view('pages.services' , (['judul' => 'Services']));
     }
 
 

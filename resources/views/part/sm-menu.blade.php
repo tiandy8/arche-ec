@@ -1,7 +1,6 @@
 <div class="sm-menu">
 
-    <h3 class="pos-section">Arche <img src="{{ url('assets/arrow-right.svg') }}" style="width: 20px" alt="">
-        <span>Store</span></h3>
+
 
 
 

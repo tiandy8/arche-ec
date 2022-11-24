@@ -88,14 +88,14 @@ class UserController extends Controller
     public function userDetail($id)
     {
         $user = User::find($id);
-        return view('pages.user', compact('user'));
+        return view('pages.user', compact('user') , (['judul' => 'Detail User']));
     }
 
     public function userEdit($id)
     {
 
         $user = User::where('id', $id)->first();
-        return view('pages.edit-user', compact('user'));
+        return view('pages.edit-user', compact('user') , (['judul' => 'Edit User']));
 
     }
 

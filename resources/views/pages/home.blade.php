@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>Arche Pet | Home</title>
+  {{-- favicon --}}
+    <link rel="icon" href="{{ asset('assets/favicon.ico')}}">
 </head>
 <body>
 

@@ -34,6 +34,12 @@
     </li>
 
     <li class="nav-item active">
+        <a class="nav-link" href="{{ route('serviss') }}">
+            <i class="fas fa-fw fa-bone"></i>
+            <span>Daftar Service</span></a>
+    </li>
+
+    <li class="nav-item active">
         <a class="nav-link" onclick="document.getElementById('logout-form').submit()" href="#">
             <i class="fas fa-fw fa-leave"></i>
             <span>LogOut</span></a>

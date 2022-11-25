@@ -62,7 +62,11 @@ Route::middleware('auth')->group(function() {
 
 Route::middleware('admin')->group(function(){
 
+    // Dashboard Page
+
     Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+
+    // Products
 
     Route::get('products', [AdminController::class, 'products'])->name('products');
     Route::get('product/create', [AdminController::class, 'productCreate'])->name('product.create');
@@ -71,6 +75,18 @@ Route::middleware('admin')->group(function(){
     Route::post('product/update/{id}', [AdminController::class, 'productUpdate'])->name('product.update');
     Route::get('product/destroy/{id}', [AdminController::class, 'productDestroy'])->name('product.destroy');
     Route::post('product/update-img/{id}', [AdminController::class, 'updateImage'])->name('update.image');
+
+    // Services
+
+    Route::get('serviss', [AdminController::class, 'serviss'])->name('serviss');
+    Route::get('servis/create', [AdminController::class, 'servisCreate'])->name('servis.create');
+    Route::post('servis/store', [AdminController::class, 'servisStore'])->name('servis.store');
+    Route::get('servis/edit/{id}', [AdminController::class, 'servisEdit'])->name('servis.edit');
+    Route::post('servis/update/{id}', [AdminController::class, 'servisUpdate'])->name('servis.update');
+    Route::get('servis/destroy/{id}', [AdminController::class, 'servisDestroy'])->name('servis.destroy');
+    Route::post('servis/update-img/{id}', [AdminController::class, 'updateServiceImage'])->name('update.service.image');
+
+    // Message Function
 
     Route::get('pesan', [AdminController::class, 'pesan'])->name('pesan');
     Route::post('pesan/delete/{id}', [AdminController::class, 'messagesDestroy'])->name('messages.destroy');

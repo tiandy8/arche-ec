@@ -1036,7 +1036,7 @@ footer {
 #subtotal span{
     font-size: 20px;
     font-weight: bold;
-    margin-left: 370px;
+    margin-left: 280px;
 }
 
 #tombolan{
@@ -1083,5 +1083,37 @@ footer {
     font-weight: 500;
     border-radius: 15px;
     font-size: 20px;
+}
+
+.btn-ganti-qty{
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.btn-ganti-qty button{
+    color: black;
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.qty-pembelian{
+    -moz-appearance: textfield;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    background-color: #ffffff;
+    color: #202030;
+
+}
+.qty-pembelian::-webkit-inner-spin-button,
+.qty-pembelian::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
 }
 

@@ -21,7 +21,7 @@
 
             <div class="p-w">
 
-            @foreach ( $datas as $data )
+            @forelse ( $datas as $data )
 
 
                <a href="/detail-produk/{{ $data->id }}" id="product-cage">
@@ -39,7 +39,13 @@
                </a>
 
 
-            @endforeach
+            @empty
+
+               Maaf, Tidak ada Produk yang tersedia saat ini
+
+
+
+            @endforelse
 
         </div>
 

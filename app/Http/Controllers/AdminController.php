@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Message;
+use App\Models\Service;
 
 class AdminController extends Controller
 {
@@ -141,5 +142,119 @@ class AdminController extends Controller
 
 
     }
+
+
+    public function serviss()
+    {
+        $serviss = Service::latest()->get();
+        return view('admin.servis', compact('serviss'));
+
+    }
+
+    public function servisCreate()
+    {
+        return view('admin.create-service');
+    }
+
+    public function servisStore(Request $request)
+    {
+
+        $data = new Service();
+        $data->nama_service = $request->nama_service;
+        $data->deskripsi = $request->deskripsi;
+
+        $gambar_service = $request->gambar_service;
+
+            $photoName = $gambar_service->getClientOriginalName();
+            $destination = 'foto';
+            $gambar_service->move($destination, $photoName);
+            $data->gambar_service = $photoName;
+
+        $data->save();
+
+        return redirect()->route('serviss');
+    }
+
+
+    public function servisEdit($id)
+    {
+
+        $services = Service::find($id);
+        return view('admin.edit-service', compact('services'));
+
+    }
+
+    public function updateServiceImage(Request $request, $id)
+    {
+        $request->validate([
+            'gambar_service' => 'required|image'
+        ]);
+
+        $service = Service::findOrFail($id);
+        // if ($request->gambar_produk) {
+        //     unlink('photos/' . $product->gambar_produk);
+        //     $gambar = $request->file('gambar')->store('products');
+        //     $car->update(['gambar' => $gambar]);
+
+        // }
+
+        if ($request->gambar_service) {
+                unlink('foto/' . $service->gambar_service);
+                $gambar_service = $request->gambar_service;
+
+                $photoName = $gambar_service->getClientOriginalName();
+                $destination = 'foto';
+                $gambar_service->move($destination, $photoName);
+                $service->gambar_service = $photoName;
+                $service->update();
+
+
+            }
+
+
+            return redirect()->back()->with([
+                'message'=>'gambar berhasil diedit',
+                'alert-type'=> 'info'
+            ]);
+
+
+
+    }
+
+    public function servisUpdate(Request $request, $id)
+    {
+        $data = Service::find($id);
+        $data->nama_service = $request->nama_service;
+        $data->deskripsi = $request->deskripsi;
+        $data->update();
+
+        return redirect()->route('serviss');
+
+    }
+
+
+
+    public function servisDestroy(Request $request, $id)
+    {
+
+        $service = Service::find($id);
+        unlink("foto/". $service->gambar_service);
+        $service->delete();
+
+
+
+        return redirect()->back();
+
+
+
+    }
+
+
+
+
+
+
+
+
 
 }

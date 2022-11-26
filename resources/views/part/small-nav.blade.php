@@ -1,6 +1,8 @@
 <div class="sm-navbar">
-    <h3 class="pos-section"><a style="color: black; text-decoration:none;"   href="{{ url('/store') }}">Arche</a> <img src="assets/arrow-right.svg" style="width: 20px" alt="">
-        <span>Store</span></h3>
+    <div class="pertanda">
+        <h3 class="pos-section"><a style="color: black; text-decoration:none;"   href="{{ url('/store') }}">Arche</a> <img src="assets/arrow-right.svg" style="width: 20px" alt="">
+            <span>Store</span></h3>
+    </div>
 
     <div class="searchbar">
         <form action="{{ route('store') }}" method="get">

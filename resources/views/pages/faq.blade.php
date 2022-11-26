@@ -9,8 +9,11 @@
        <h1>FAQ'S</h1>
     </div>
     <div class="container">
-     <h3 class="pos-section">Arche <img src="assets/arrow-right.svg" alt="">
-       <span>Events</span></h3>
+        <div class="pertanda">
+            <h3 class="pos-section">Arche <img src="assets/arrow-right.svg" alt="">
+                <span>FAQ</span></h3>
+
+        </div>
 
        <div class="faq-wrapper">
          <div class="faq-points">

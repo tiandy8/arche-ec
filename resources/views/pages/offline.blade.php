@@ -4,8 +4,10 @@
 
 <div class="offline-store">
     <div class="container">
-      <h3 class="pos-section">Arche <img src="assets/arrow-right.svg" alt="">
-      <span>Offline Store</span></h3>
+      <div class="pertanda">
+        <h3 class="pos-section">Arche <img src="assets/arrow-right.svg" alt="">
+            <span>Offline Store</span></h3>
+      </div>
 
       <div class="offline-store-content">
        <div class="offline-left">

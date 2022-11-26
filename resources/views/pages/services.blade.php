@@ -15,10 +15,12 @@
 
 
         <div class="sm-navbar">
-            <h3 class="pos-section"><a style="color: black; text-decoration:none;"   href="{{ url('/store') }}">Arche</a> <img src="assets/arrow-right.svg" style="width: 20px" alt="">
-                <span><a style="color: black; text-decoration:none;" href="{{ route('service') }}">Service</a></span></h3>
+            <div class="pertanda">
+                <h3 class="pos-section"><a style="color: black; text-decoration:none;"   href="{{ url('/store') }}">Arche</a> <img src="assets/arrow-right.svg" style="width: 20px" alt="">
+                    <span><a style="color: black; text-decoration:none;" href="{{ route('service') }}">Service</a></span></h3>
 
-            <div class="searchbar">
+            </div>
+            <div class="searchbar" style="margin-top: 10px">
                 <form action="{{ route('service') }}" method="get">
 
                     <input type="text" name="search" placeholder="Search Products.. " >
@@ -63,6 +65,9 @@
                             <p>{{ $data->deskripsi }}</p>
                             <div class="rating">
                                 <img src="assets/star.svg" alt="" style="height:25px;"><p>4.7</p>
+                            </div>
+                            <div class="reserv-e">
+                                 Interested ? <a href="https://wa.me/085788961266?text=I%20am%20interested%20in%20your%20{{ $data->nama_service }}" class="btn-small">Reserve Now!..</a>
                             </div>
                         </div>
                     </div>

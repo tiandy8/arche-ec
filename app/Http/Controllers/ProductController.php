@@ -16,7 +16,10 @@ class ProductController extends Controller
         return view('pages.detail', compact('data') , (['judul' => 'Detail Produk' ]));
     }
 
-
+    public function cart()
+    {
+        return view('pages.keranjang', ['judul' => 'Keranjang Belanja']);
+    }
 
 
 

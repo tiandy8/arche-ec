@@ -3,18 +3,22 @@
 
 <section class="deprod">
 
-    @if (Auth::check() >= 1)
+    <span class="mendoan">
+        @if (Auth::check() >= 1)
 
-        @include('part.sm-menu')
+            @include('part.sm-menu')
 
-    @endif
+        @endif
 
+    </span>
 
 
     <div class="container">
 
-        <h3 class="pos-section"><a style="color: black; text-decoration:none;" href="{{ url('/store') }}">Arche</a> <img src="{{ url('assets/arrow-right.svg') }}" style="width: 20px" alt="">
-            <span>Detail</span></h3>
+        <div class="pertanda">
+            <h3 class="pos-section"><a style="color: black; text-decoration:none;" href="{{ url('/store') }}">Arche</a> <img src="{{ url('assets/arrow-right.svg') }}" style="width: 20px" alt="">
+                <span>Detail</span></h3>
+        </div>
 
         <div class="detail-produk">
 

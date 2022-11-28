@@ -1,4 +1,5 @@
 const myInput = document.getElementById("my-input");
+
 function stepper(btn){
     let id = btn.getAttribute("id");
     let min = myInput.getAttribute("min");
@@ -11,6 +12,7 @@ function stepper(btn){
     if(newValue >= min && newValue <= max){
         myInput.setAttribute("value", newValue);
     }
+
 
 
     console.log(id, calcStep);

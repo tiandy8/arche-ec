@@ -28,7 +28,11 @@
                     <div class="card-p">
                         <img src="{{ asset('photos/'.$data->gambar_produk) }}" alt="Denim Jeans" style="width:100%">
 
-                        <h3>{{ $data->nama_produk }}</h3>
+                        <h3>{{ $data->nama_produk }}   @if ($data->stok < 1)
+
+                                 (STOK HABIS)
+
+                                @endif</h3>
 
                         <p class="price">Rp.{{ number_format($data->harga) }}</p>
 
@@ -41,9 +45,9 @@
 
             @empty
 
-               Maaf, Tidak ada Produk yang tersedia saat ini
-
-
+                <div class="peringatan">
+                    <p>Maaf, Tidak ada Barang yang tersedia saat ini!..</p>
+                </div>
 
             @endforelse
 

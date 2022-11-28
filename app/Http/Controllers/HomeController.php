@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Message;
 use App\Models\Product;
 use App\Models\Service;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -101,6 +102,12 @@ class HomeController extends Controller
 
 
         return view('pages.services' , compact('datas'),(['judul' => 'Services']));
+    }
+
+    public function daftarPesanan()
+    {
+        $datas = Order::get();
+        return view('pages.daftar-pesanan', compact('datas') , (['judul' => 'Daftar Pesanan']));
     }
 
 

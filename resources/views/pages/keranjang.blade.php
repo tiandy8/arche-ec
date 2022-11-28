@@ -18,33 +18,38 @@
                 <h1 class="judul-keranjang">Keranjang</h1>
                 <hr class="garis-keranjang">
 
+                @php
+                    $jml = 0;
+                @endphp
+                @foreach ($barangs as $barang)
+                @php
+                    $jml += $barang->jumlah_harga;
+                @endphp
+
                 <div class="cart-items">
-
-                    <div id="inputPreview">
-                        <input name="cssCheckbox" id="demo_opt_1" type="checkbox" class="css-checkbox">
-                        <label for="demo_opt_1"></label>
-                    </div>
-
-                    <img src="{{ url('assets/wskas.jpg') }}" alt="">
-
+                    <img src="{{ url('photos/' . $barang->barang->gambar_produk) }}" alt="">
                     <div class="cart-details">
-                        <h3>HERBAL SN(harga untuk 1 renteng isi 10 bungkus)</h3>
-                        <small>Stok: 72</small>
-                        <p>Rp70.000</p>
-
-
+                        <h3>{{ $barang->barang->nama_produk }}</h3>
+                        <small>Stok: {{ $barang->barang->stok }}</small>
+                        <p>Rp{{ str_replace(',','.', number_format($barang->barang->harga)) }}                  <span style="margin-left: 10%; font-weight:600;">Subtotal : Rp{{ str_replace(',','.', number_format($barang->barang->harga * $barang->jumlah)) }} </span></p>
                         <div class="cd-btm">
-                            <img src="{{ url('assets/trash.svg') }}" style="width:27px; height:30px;" alt="">
-                            <div class="btn-ganti-qty">
-                                <button id="decrement" onclick="stepper(this)"> - </button>
-                                <input readonly type="number" class="qty-pembelian" min="1" max="7" step="1" value="1" id="my-input">
-                                <button id="increment" onclick="stepper(this)"> + </button>
-                            </div>
+                            <a href="{{ url('/cart/apus-brg/'. $barang->barang_id) }}"><img src="{{ url('assets/trash.svg') }}" style="width:27px; height:30px;" alt=""></a>
+
+                            <form action="{{ url('/cart/ganti-qty/'. $barang->barang_id) }}" method="post">
+                                @csrf
+                                <div class="btn-ganti-qty">
+                                    <button id="decrement" onclick="stepper(this)"> - </button>
+                                    <input readonly type="number" name="jumlah_pesan" class="qty-pembelian" min="1" max="{{ $barang->barang->stok }}" step="1" value="{{ $barang->jumlah }}" id="my-input">
+                                    <button id="increment" onclick="stepper(this)"> + </button>
+                                </div>
+                            </form>
                         </div>
-
                     </div>
-
                 </div>
+
+
+
+                @endforeach
 
 
 
@@ -57,10 +62,8 @@
 
                     <div class="rb-l">
                         <div id="inputPreview">
-                            <input name="cssCheckbox" id="demo_opt_1" type="checkbox" class="css-checkbox">
-                            <label for="demo_opt_1"> Pilih Semua  </label>
-                            |
-                            <a href="#" style="text-decoration: none; color:black;">Hapus</a>
+
+                            <a href="{{ route('apus.semua') }}" style="text-decoration:none; color:black;">Hapus Semua</a>
 
                         </div>
 
@@ -70,12 +73,21 @@
 
 
                     <div class="rb-m">
-                        <h4>Jumlah Barang : ( 0 barang )  </h4>
+                        <h4>Jumlah Barang : ( {{ count($barangs) }} barang )  </h4>
                     </div>
 
                     <div class="rb-r">
-                        <h4>Total Harga  Rp. 100,000</h4>
-                        <a href="#" class="btn-lebar">Checkout</a>
+                        <form method="post" action="checkout">
+                            @csrf
+                            <h4>Total Harga  Rp. {{  str_replace(',','.', number_format($jml)) }}</h4>
+                            <input type="hidden" value="{{  $jml }}" name="total">
+                            @if ($jml >= 1)
+                                <button type="submit" name="checkout" value="checkout" class="btn-lebar">Checkout</button>
+                            @else
+                                <button disabled type="submit" name="checkout" style="background: grey  ; opacity:0.5;" value="checkout" class="btn-lebar">Checkout</button>
+
+                            @endif
+                        </form>
                     </div>
                 </div>
 

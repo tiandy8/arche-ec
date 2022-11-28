@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Message;
 use App\Models\Service;
+use App\Models\Order;
 
 class AdminController extends Controller
 {
@@ -249,8 +250,32 @@ class AdminController extends Controller
 
     }
 
+    public function order()
+    {
+        $datas = Order::latest()->get();
+
+        return view('admin.pesanan', compact('datas'));
+    }
+
+    public function orderDetail($id)
+    {
+        $data = Order::find($id);
 
 
+
+        return view('admin.pesanan-detail',compact('data'));
+    }
+
+
+    public function updateStatus(Request $request, $id)
+    {
+        $data = Order::find($id);
+
+        $data->status = $request->status;
+        $data->update();
+
+        return redirect()->back()->with('status', "Status Pemesanan berhasil di update");
+    }
 
 
 

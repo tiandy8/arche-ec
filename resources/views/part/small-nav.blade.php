@@ -8,7 +8,7 @@
         <form action="{{ route('store') }}" method="get">
 
             <input type="text" name="search" placeholder="Search Products.. " >
-            <img src="assets/search-normal.svg"  alt="">
+            <img src="assets/search-normal.svg" class="magglass"  alt="">
 
         </form>
     </div>

@@ -74,9 +74,9 @@
 
 
                 @empty
-
-                    <p style="text-align: center">Maaf, Tidak ada Service yang tersedia saat ini </p>
-
+                <div class="peringatan">
+                    <p>Maaf, Tidak ada Barang yang tersedia saat ini!..</p>
+                </div>
                 @endforelse
 
 

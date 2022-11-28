@@ -27,11 +27,21 @@ Route::get('offline', [HomeController::class, 'offlineStore'])->name('offline.st
 
 Route::get('store', [HomeController::class, 'store'])->name('store');
 Route::get('detail-produk/{id}', [ProductController::class, 'detailProduk'])->name('detail.produk');
+
 Route::get('cart', [ProductController::class, 'cart'])->name('cart');
+
+Route::post('cart/ganti-qty/{id}', [ProductController::class, 'gantiQty'])->name('ganti.qty');
+
+Route::get('cart/apus-brg/{id}', [ProductController::class, 'apusBarang'])->name('apus.brg');
+Route::get('cart/apus-semua', [ProductController::class, 'apusSemua'])->name('apus.semua');
+
+Route::post('checkout', [ProductController::class, 'checkout'])->name('checkout');
+Route::post('pemesanan/{id}', [ProductController::class, 'pemesanan'])->name('pemesanan');
 
 Route::get('service', [HomeController::class, 'service'])->name('service');
 
-
+Route::get('invoice/{id}',[ProductController::class, 'invoice'])->name('invoice');
+Route::get('daftar-pesanan',[HomeController::class, 'daftarPesanan'])->name('daftar.pesanan');
 
 Route::middleware('guest')->group(function () {
 
@@ -92,5 +102,9 @@ Route::middleware('admin')->group(function(){
     Route::get('pesan', [AdminController::class, 'pesan'])->name('pesan');
     Route::post('pesan/delete/{id}', [AdminController::class, 'messagesDestroy'])->name('messages.destroy');
 
+    // Pesanan
 
+    Route::get('orders', [AdminController::class, 'order'])->name('order');
+    Route::get('orders/detail/{id}', [AdminController::class, 'orderDetail'])->name('order.detail');
+    Route::post('orders/detail/update/{id}', [AdminController::class, 'updateStatus'])->name('status.update');
 });

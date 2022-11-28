@@ -35,21 +35,45 @@
                     <hr class="garis-produk">
 
 
+                    <form action="{{ url('pemesanan/' .$data->id) }}" method="post">
+                        @csrf
 
-                            <div class="btn-ganti-qty">
-                                <button id="decrement" onclick="stepper(this)"> - </button>
-                                <input readonly type="number" class="qty-pembelian" min="1" max="{{ $data->stok }}" step="1" value="1" id="my-input">
-                                <button id="increment" onclick="stepper(this)"> + </button>
-                            </div>
+                        <div class="btn-ganti-qty">
+                            <a id="decrement" onclick="stepper(this)"> - </a>
+                            <input readonly type="number" name="jumlah_pesan" class="qty-pembelian" min="1" max="{{ $data->stok }}" step="1" value="1" id="my-input">
+                            <a id="increment" onclick="stepper(this)"> + </a>
+                        </div>
 
-                    <p class="stok-total">Stock: <span>{{ $data->stok }}</span></p>
+                        <p class="stok-total">Stock: <span>{{ $data->stok }}</span></p>
 
-                    <p id="subtotal">Subtotal:  <span>Rp. {{ number_format($data->harga   )  }} </span></p>
+                        <p id="subtotal">Subtotal:  <span>Rp. {{ number_format($data->harga   )  }} </span></p>
 
-                    <div id="tombolan">
-                        <a href="#" class="btn-beli">Beli</a>
-                        <a href="#" class="btn-keranjang">+ Keranjang</a>
-                    </div>
+                        @if(session('status'))
+
+                            <p class="text-success" style="color: green; text-align:center;">{{ session('status') }}</p>
+
+
+                        @endif
+
+                       @if (Auth::check())
+                                @if ( $data->stok >= 1 )
+                                <div id="tombolan">
+                                    <button  class="btn-keranjang">+ Keranjang</button>
+                                </div>
+
+                            @else
+                            <p class="peringatan">Maaf Produk tidak tersedia</p>
+
+
+                            @endif
+
+                        @else
+
+                                <div class="peringatan">Dimohon Login sebelum membeli</div>
+
+                       @endif
+
+                    </form>
 
                 </div>
             </div>

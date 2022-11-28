@@ -152,6 +152,7 @@
 
                             <p>
                                 {{ $data->nama_produk }}
+
                             </p>
                             <span>Rp.{{ number_format($data->harga) }}</span>
 
@@ -173,7 +174,10 @@
 
             @empty
 
-            <p>There's no Hot Offer's now :D</p>
+
+            <div class="peringatan">
+                <p>Maaf, Tidak ada Barang yang tersedia saat ini!..</p>
+            </div>
 
             @endforelse
 

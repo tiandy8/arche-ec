@@ -240,17 +240,21 @@ nav{
 
 .tawaran-desc{
     width: 50%;
-    font-size: 32px;
     padding: 0 50px 0 50px;
     display: flex;
     flex-direction: column;
 }
 .tawaran-desc p{
     font-weight: bold;
-    margin:20px 0 20px 0;
+    font-size: 22px;
+    margin:20px 0 5px 0;
 }
 .tawaran-desc span{
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.tawaran-desc a{
+    padding: 5px 10px;
 }
 
 .offer-2{
@@ -300,8 +304,17 @@ nav{
 
 .reserv-e{
     display: block;
+
 }
 
+.reserv-e a{
+    background-color: #06132D;
+    padding: 8px;
+}
+.reserv-e a:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+}
 .btn-small{
     text-decoration: none;
     background-color: #FBBD08;
@@ -706,6 +719,8 @@ footer {
 .btn-a{
     background: #FBBD08;
     padding: 5px 5px;
+    color: black;
+    font-weight: 600;
     border-radius: 5px;
 }
 .btn-b{
@@ -713,6 +728,7 @@ footer {
     color:  #06132D;
     padding: 10px 5px;
     border-radius: 5px;
+    font-weight: 600;
 
 }
 
@@ -770,6 +786,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 0px 5px 0px;
     margin-left: 10px;
+    cursor: pointer;
 
 }
 
@@ -1167,7 +1184,8 @@ footer {
 .cart-items{
     width: 60%;
     margin: 20px auto;
-    height: 200px;
+    height: auto;
+    padding: 10px 0;
     box-shadow: 0px 0px 5px;
     display: flex;
     border-radius: 15px;
@@ -1487,6 +1505,7 @@ footer {
         padding-top: 30px;
     }
 
+
     .items-sm{
         display: none;
     }
@@ -1511,8 +1530,11 @@ footer {
         display: block;
         width: 100%;
     }
-    .tawaran-desc p,span{
-        font-size: 26px;
+    .font-sm{
+        font-size: 12px;
+    }
+    .tawaran-desc p{
+        font-size: 10px;
     }
 
     .btn-sm{
@@ -1738,7 +1760,7 @@ footer {
     }
 
 
-    .
+
 
 }
 
@@ -1773,3 +1795,115 @@ footer {
         margin: 0;
     }
   }
+
+
+
+/* peranimasian */
+
+#myTopnav ul li a:hover{
+    border-top:1px solid white;
+    padding: 5px;
+    border-bottom:1px solid white;
+    transition: 0.3s;
+}
+
+.features ul li a:hover{
+    border-top:1px solid white;
+    padding: 5px;
+    border-bottom:1px solid white;
+    transition: 0.3s;
+}
+
+.btn-a:hover{
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+    transition: 0.3s;
+}
+.btn-b:hover{
+
+    background-color: #FBBD08;
+    opacity: 0.8;
+    color: black;
+    transition: 0.3s;
+
+}
+.btn-yellow:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+#lm-btn:hover{
+    background-color:#06132D;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+.btn-lg:hover{
+    background-color:#06132D;
+    color: white;
+    transition: 0.3s;
+}
+
+.kontak-btn:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.btn-lebar:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.btn-primary:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.btn-keranjang:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.btn-lg-red:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.events-tombol:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.btn-lg-green:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+
+}
+.tawaran-desc a:hover{
+
+    background-color:#06132D;
+    color: white;
+    transition: 0.3s;
+}
+
+.searchbar form input:hover {
+    background-color: gray;
+    opacity: 0.6;
+    color: white;
+
+}
+
+.urutkan select:hover{
+
+    background-color: gray;
+    opacity: 0.6;
+    color: white;
+
+}

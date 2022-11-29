@@ -1,6 +1,6 @@
-const myInput = document.getElementById("my-input");
 
-function stepper(btn){
+function stepper(btn, target, jenis){
+    const myInput = document.getElementById(target);
     let id = btn.getAttribute("id");
     let min = myInput.getAttribute("min");
     let max = myInput.getAttribute("max");
@@ -13,7 +13,4 @@ function stepper(btn){
         myInput.setAttribute("value", newValue);
     }
 
-
-
-    console.log(id, calcStep);
 }

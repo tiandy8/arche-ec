@@ -38,10 +38,11 @@
                             <form action="{{ url('/cart/ganti-qty/'. $barang->barang_id) }}" method="post">
                                 @csrf
                                 <div class="btn-ganti-qty">
-                                    <button id="decrement" onclick="stepper(this)"> - </button>
-                                    <input readonly type="number" name="jumlah_pesan" class="qty-pembelian" min="1" max="{{ $barang->barang->stok }}" step="1" value="{{ $barang->jumlah }}" id="my-input">
-                                    <button id="increment" onclick="stepper(this)"> + </button>
+                                    <button id="decrement" onclick="stepper(this, 'my-input{{ $barang->id }}', 'decrement')" type="button"> - </button>
+                                    <input readonly type="number" name="jumlah_pesan" class="qty-pembelian" min="1" max="{{ $barang->barang->stok }}" step="1" value="{{ $barang->jumlah  }}" id="my-input{{ $barang->id }}">
+                                    <button id="increment" onclick="stepper(this, 'my-input{{ $barang->id }}', 'increment')" type="button"> + </button>
                                 </div>
+                                <button id="updet" class="btn">Update</button>
                             </form>
                         </div>
                     </div>

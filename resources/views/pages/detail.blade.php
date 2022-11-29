@@ -37,11 +37,17 @@
 
                     <form action="{{ url('pemesanan/' .$data->id) }}" method="post">
                         @csrf
-
+{{--
                         <div class="btn-ganti-qty">
                             <a id="decrement" onclick="stepper(this)"> - </a>
                             <input readonly type="number" name="jumlah_pesan" class="qty-pembelian" min="1" max="{{ $data->stok }}" step="1" value="1" id="my-input">
                             <a id="increment" onclick="stepper(this)"> + </a>
+                        </div> --}}
+
+                        <div class="btn-ganti-qty">
+                            <button id="decrement" onclick="stepper(this, 'my-input{{ $data->id }}', 'decrement')" type="button"> - </button>
+                            <input readonly type="number" name="jumlah_pesan" class="qty-pembelian" min="1" max="{{ $data->stok }}" step="1" value="1" id="my-input{{ $data->id }}">
+                            <button id="increment" onclick="stepper(this, 'my-input{{ $data->id }}', 'increment')" type="button"> + </button>
                         </div>
 
                         <p class="stok-total">Stock: <span>{{ $data->stok }}</span></p>

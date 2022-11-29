@@ -34,13 +34,8 @@
                     <a href="{{ route('forgot.password') }}" class="forgot-pw">Forgot Password ?</a>
 
                 <button  class="btn-warning">Login</button>
-                    Or
-                <div class="signupwg">
-                    <a href="#">
-                    <img src="assets/google.svg" alt="">
-                    <span>Sign Up with Google</span>
-                    </a>
-                </div>
+
+
             </form>
 
           <a href="{{ route('register') }}" class="no-acc">Not A Member? Sign Up</a>

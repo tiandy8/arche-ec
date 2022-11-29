@@ -15,7 +15,7 @@
 
             <div class="events-section">
                 <div class="events-left">
-                    <img src="{{ url('assets/pzoo.png') }}" alt="image">
+                    <img src="{{ url('assets/petzoo.jpg') }}" alt="image">
                 </div>
                 <div class="events-right">
                     <h2>Best Farms And Petting Zoos For Kids In Jakarta</h2>
@@ -25,6 +25,20 @@
                         farms that the kids and family can visit together.  Here are some
                         of our favorite farms and petting zoos in and around Jakarta.
                         Go on now – try one this weekend.
+                    </p>
+                    <small>Tue,27 September 2022</small>
+                    <a href="#" class="events-tombol">View More</a>
+                </div>
+            </div>
+
+            <div class="events-section">
+                <div class="events-left">
+                    <img src="{{ url('assets/catnip.jpg') }}" alt="image">
+                </div>
+                <div class="events-right">
+                    <h2>Pet Walk 2023</h2>
+                    <p>
+                        Pet Walk details will announced in 22 april 2023
                     </p>
                     <small>Tue,27 September 2022</small>
                     <a href="#" class="events-tombol">View More</a>

@@ -150,10 +150,10 @@
 
                         <div class="tawaran-desc">
 
-                            <p>
+                            <h4 class="font-sm">
                                 {{ $data->nama_produk }}
 
-                            </p>
+                            </h4>
                             <span>Rp.{{ number_format($data->harga) }}</span>
 
                             <a href="/store" class="btn-sm">Go to Shop</a>

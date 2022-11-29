@@ -23,10 +23,25 @@ Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('contact', [HomeController::class, 'contactStore'])->name('contact.store');
 Route::get('events', [HomeController::class, 'events'])->name('events');
 Route::get('offline', [HomeController::class, 'offlineStore'])->name('offline.store');
+
+
 Route::get('store', [HomeController::class, 'store'])->name('store');
+Route::get('detail-produk/{id}', [ProductController::class, 'detailProduk'])->name('detail.produk');
+
+Route::get('cart', [ProductController::class, 'cart'])->name('cart');
+
+Route::post('cart/ganti-qty/{id}', [ProductController::class, 'gantiQty'])->name('ganti.qty');
+
+Route::get('cart/apus-brg/{id}', [ProductController::class, 'apusBarang'])->name('apus.brg');
+Route::get('cart/apus-semua', [ProductController::class, 'apusSemua'])->name('apus.semua');
+
+Route::post('checkout', [ProductController::class, 'checkout'])->name('checkout');
+Route::post('pemesanan/{id}', [ProductController::class, 'pemesanan'])->name('pemesanan');
+
 Route::get('service', [HomeController::class, 'service'])->name('service');
 
-
+Route::get('invoice/{id}',[ProductController::class, 'invoice'])->name('invoice');
+Route::get('daftar-pesanan',[HomeController::class, 'daftarPesanan'])->name('daftar.pesanan');
 
 Route::middleware('guest')->group(function () {
 
@@ -58,7 +73,11 @@ Route::middleware('auth')->group(function() {
 
 Route::middleware('admin')->group(function(){
 
+    // Dashboard Page
+
     Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+
+    // Products
 
     Route::get('products', [AdminController::class, 'products'])->name('products');
     Route::get('product/create', [AdminController::class, 'productCreate'])->name('product.create');
@@ -68,8 +87,24 @@ Route::middleware('admin')->group(function(){
     Route::get('product/destroy/{id}', [AdminController::class, 'productDestroy'])->name('product.destroy');
     Route::post('product/update-img/{id}', [AdminController::class, 'updateImage'])->name('update.image');
 
+    // Services
+
+    Route::get('serviss', [AdminController::class, 'serviss'])->name('serviss');
+    Route::get('servis/create', [AdminController::class, 'servisCreate'])->name('servis.create');
+    Route::post('servis/store', [AdminController::class, 'servisStore'])->name('servis.store');
+    Route::get('servis/edit/{id}', [AdminController::class, 'servisEdit'])->name('servis.edit');
+    Route::post('servis/update/{id}', [AdminController::class, 'servisUpdate'])->name('servis.update');
+    Route::get('servis/destroy/{id}', [AdminController::class, 'servisDestroy'])->name('servis.destroy');
+    Route::post('servis/update-img/{id}', [AdminController::class, 'updateServiceImage'])->name('update.service.image');
+
+    // Message Function
+
     Route::get('pesan', [AdminController::class, 'pesan'])->name('pesan');
     Route::post('pesan/delete/{id}', [AdminController::class, 'messagesDestroy'])->name('messages.destroy');
 
+    // Pesanan
 
+    Route::get('orders', [AdminController::class, 'order'])->name('order');
+    Route::get('orders/detail/{id}', [AdminController::class, 'orderDetail'])->name('order.detail');
+    Route::post('orders/detail/update/{id}', [AdminController::class, 'updateStatus'])->name('status.update');
 });

@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Masuk  / Login | Arche Pet</title>
+  {{-- favicon --}}
+  <link rel="icon" href="{{ asset('assets/favicon.ico')}}">
   <link rel="stylesheet" href="{{ asset('reglog/style.css') }}">
 </head>
 <body class="body-login">
@@ -23,22 +25,17 @@
           <form action="{{ route('login.store') }}" method="post">
              @csrf
                 <h3>Email</h3>
-                <input type="email" class="email" name="email" placeholder="Enter Your Email">
+                <input type="email" class="email" name="email" placeholder="Enter Your Email" required>
 
                 <h3>Password</h3>
-                <input type="password" class="password" name="password" placeholder="Enter Your Password">
+                <input type="password" class="password" name="password" placeholder="Enter Your Password" required>
 
                 <div class="opt">
                     <a href="{{ route('forgot.password') }}" class="forgot-pw">Forgot Password ?</a>
 
                 <button  class="btn-warning">Login</button>
-                    Or
-                <div class="signupwg">
-                    <a href="#">
-                    <img src="assets/google.svg" alt="">
-                    <span>Sign Up with Google</span>
-                    </a>
-                </div>
+
+
             </form>
 
           <a href="{{ route('register') }}" class="no-acc">Not A Member? Sign Up</a>

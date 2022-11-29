@@ -189,3 +189,64 @@ button:disabled,
 button[disabled]{
     opacity: 0.3;
 }
+
+
+@media screen and (max-width: 400px) {
+    .body-login{
+        width: 390px;
+    }
+    .container{
+        max-width: 390px;
+    }
+    .login-wrapper{
+        width:95%;
+        margin: 0 auto;
+    }
+    .garis-login{
+        width: 98%;
+    }
+
+    /* register */
+
+    #body-reg{
+        height: auto;
+
+    }
+
+    .content{
+        width: 100%;
+        margin: 0;
+        padding-right: 100px;
+    }
+    .register{
+        width: 100%;
+    }
+    .wrap{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .wrap .wrap-1 h3{
+        font-size: 16px;
+      }
+    .wrap .wrap-2 h3{
+        font-size: 16px;
+      }
+    .ml-5{
+        font-size: 16px;
+    }
+    .input-lg{
+        width: 66%;
+    }
+    .input{
+        width: 100%;
+        padding: 15px 0 15px 5px;
+        margin: 0;
+    }
+    .btn{
+        margin: 10px 0;
+    }
+    .content form .btn{
+        margin-left: 120px;
+    }
+
+}

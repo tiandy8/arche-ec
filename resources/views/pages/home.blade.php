@@ -4,10 +4,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ url('css/style.css') }}">
   <title>Arche Pet | Home</title>
+  {{-- favicon --}}
+    <link rel="icon" href="{{ asset('assets/favicon.ico')}}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 </head>
 <body>
+
+     <!-- Navbar -->
+ <nav id="navibari">
+    <img src="{{ url('assets/logo-yellow.png') }}" alt="Arche" class="logo-y">
+    <div class="menu" id="myTopnav">
+      <ul>
+        <li><a href="{{ route('index') }}">HOME</a></li>
+        <li><a href="{{ route('store') }}">SHOP</a></li>
+        <li><a href="{{ route('offline.store') }}">OFFLINE STORE</a></li>
+        <li><a href="{{ route('service') }}">SERVICE</a></li>
+
+
+
+
+
+        @if (Auth::check() < 1)
+            <a href="/register" class="btn btn-a">Register</a>
+            <a href="/login" class="btn btn-b">Login</a>
+        @endif
+
+      </ul>
+
+    </div>
+    <a href="javascript:void(0);" class="hamboorger" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+  </nav>
+
 
   <section class="hero">
     <img src="assets/logo.svg" id="logo" alt="">
@@ -117,9 +150,10 @@
 
                         <div class="tawaran-desc">
 
-                            <p>
+                            <h4 class="font-sm">
                                 {{ $data->nama_produk }}
-                            </p>
+
+                            </h4>
                             <span>Rp.{{ number_format($data->harga) }}</span>
 
                             <a href="/store" class="btn-sm">Go to Shop</a>
@@ -140,7 +174,10 @@
 
             @empty
 
-            <p>There's no Hot Offer's now :D</p>
+
+            <div class="peringatan">
+                <p>Maaf, Tidak ada Barang yang tersedia saat ini!..</p>
+            </div>
 
             @endforelse
 
@@ -177,7 +214,7 @@
         <div class="services-content">
           <h3>Pet Clinic</h3>
           <p>Apoquel is an oral tablet that works differently than other allergy medications. It goes straight to the source to help relieve itch and inflammation at its core—addressing the underlying cause of irritation</p>
-          <a href="#" class="btn">Explore</a>
+          <a href="{{ route('service') }}" class="btn">Explore</a>
         </div>
       </div>
 
@@ -187,7 +224,7 @@
         <div class="services-content">
           <h3>Clothes</h3>
           <p>Is your dog at the top of his/her fashion game? Don't forget a dog bikini or swim trunks for your pet's next vacation! Whether poolside, at the beach, or on the yacht, your pooch will look summer-ready</p>
-          <a href="#" class="btn">Explore</a>
+          <a href="{{ route('service') }}" class="btn">Explore</a>
         </div>
 
       </div>
@@ -199,7 +236,7 @@
         <div class="services-content">
           <h3>Breed-specific Haircuts</h3>
           <p>Regular grooming is essential to your pet's health as it helps prevent skin issues such as matting.</p>
-          <a href="#" class="btn">Explore</a>
+          <a href="{{ route('service') }}" class="btn">Explore</a>
         </div>
     </div>
 
@@ -241,6 +278,33 @@
   </section>
 
   @include('part.footer')
+
+
+  <script>
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("navibari").style.top = "0";
+    } else {
+        document.getElementById("navibari").style.top = "-120px";
+    }
+    }
+
+
+
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "menu") {
+            x.className += " responsive";
+        } else {
+            x.className = "menu";
+        }
+        }
+
+  </script>
 
 </body>
 </html>

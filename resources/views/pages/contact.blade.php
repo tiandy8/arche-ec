@@ -6,8 +6,10 @@
 <div class="hubungi-kami">
     <div class="container">
 
+      <div class="pertanda">
         <h3 class="pos-section">Arche <img src="assets/arrow-right.svg" alt="">
             <span>Contact Us</span></h3>
+      </div>
 
             <div class="hubungi-kami-content">
                 <img src="assets/logo-2.png" alt="">
